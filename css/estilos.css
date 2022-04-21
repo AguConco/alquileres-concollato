@@ -483,20 +483,39 @@ video{
 }
 .presentacionLugares div h2{
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 50%;
     width: 200px;
-    text-align: center;
-    background: #00000060;
+    background: #fff;
     font-size: 22px;
     border-radius: 5px 5px 0 0;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scaleX(.5);
+    transition: .3s;
+    box-shadow: 0 0 10px #00000060;
 }
 .presentacionLugares div h2 a{
     color: #fff;
     font-weight: 300;
     display: block;
     padding: 10px;
+    position: relative;
+    top: -50px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    background: #00000060;
+    width: 200px;
+    transform:scaleX(2);
+    transition: .3s;
+}
+.presentacionLugares div:hover h2{
+    transform: translateX(-50%) scaleX(1);
+    bottom: 0;
+}
+.presentacionLugares div:hover h2 a{
+    transform: scaleX(1);
+    top: 0;
+    background: transparent;
+    color: #585757;
 }
 .lugar1{
     background-image: url('../multimedia/img/costa.jpg');
