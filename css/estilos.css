@@ -353,7 +353,18 @@ footer a:hover{
     border-radius: 5px;
     font-size: 16px;
 }
-
+.btnEfecto:hover{
+    animation: btnEfecto 1S infinite;
+    cursor: pointer;
+}
+@keyframes btnEfecto {
+    0%{
+        background: #e7bc3d99;
+    }
+    100%{
+        background: #e7bc3d;
+    }
+}
 .footerDiv{
     display: flex;
     justify-content: space-evenly;
