@@ -36,6 +36,7 @@ main{
     border-bottom: 2px solid #e7bc3d;
     padding-bottom: 10px;
     font-size: 24px;
+    text-transform: uppercase;
 }
 .bodyInicio{
     display: grid;
@@ -551,7 +552,8 @@ video{
     margin: 60px auto;
 }
 .mejoresValoraciones h3{
-    width: 250px;
+    width: 340px;
+    text-align: center;
 }
 
 .contenedorMejoresValoraciones{
@@ -650,7 +652,9 @@ video{
     margin: 60px auto;
 }
 .contenedorFormulario h3{
-    width: 480px;
+    width: 615px;
+    text-align: center;
+
 }
 
 .formularioContacto input, .formularioContacto textarea, .formularioContacto select{
@@ -708,7 +712,7 @@ video{
 
 
 .preguntasGuias h3{
-    width: 180px;
+    width: 230px;
 }
 .preguntasGuias p{
     color: #9e9e9e;
@@ -896,7 +900,8 @@ video{
 }
 
 .mainPublicar h1{
-    width: 540px;
+    width: 680px;
+    text-align: center;
 }
 .mainPublicar h3{
     font-weight: 300;
@@ -1003,7 +1008,8 @@ video{
     margin: 80px auto;
 }
 .mainGuardados h3{
-    width: 285px;
+    width: 375px;
+    text-align: center;
 }
 
 .alquilerGuardado{
@@ -1073,22 +1079,6 @@ video{
     width: 150px;
 }
 
-.eliminarGuardado{
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: #585757;
-    display: none;
-    font-size: 18px;
-    -webkit-text-stroke: 1px #fff;
-
-}
-.alquilerGuardado:hover .eliminarGuardado{
-    display: flex;
-}
-.eliminarGuardado:hover{ 
-    color: #f11;
-}
 .eliminarTodo{
     width: 100%;
     display: flex;
@@ -1107,6 +1097,7 @@ video{
     padding: 5px;
     margin-left: 10px;
     color: #585757;
+    cursor: pointer;
 
 }
 .eliminarTodo button:hover{
@@ -1210,7 +1201,10 @@ video{
     .contenedorFormulario{
         width: 580px;
     }
-
+    .contenedorFormulario h3{
+        width: 440px;
+    
+    }
     .preguntasListas{
         width: 580px;
     }
@@ -1249,6 +1243,10 @@ video{
 .mainPublicar{
     width: 580px;
 } 
+.mainPublicar h1{
+    width: 370px;
+    text-align: center;
+}
 .datosTel select{
     width: 32%;
 }
@@ -1268,9 +1266,7 @@ video{
 .infoGuardado h2{
     font-size: 20px;
 }
-.eliminarGuardado{
-    display: block;
-}
+
 
 
 /* Guardados */
@@ -1456,7 +1452,9 @@ header{
 .mejoresValoraciones{
     width: 95%;
 }
-
+.mejoresValoraciones h3{
+    width: 205px;
+}
 .alojamientosMejoresValorados{
     justify-content: space-between;
     width: 100%;
@@ -1484,7 +1482,10 @@ header{
     width: 95%;
     margin: 60px auto;
 }
+.contenedorFormulario h3{
+    width: 350px;
 
+}
 .datosFormularioContacto{
     width: 100%;
 }
@@ -1531,11 +1532,12 @@ header{
 .mainPublicar{
     width: 100%;
 } 
+
 .infoPublicar{
     right: 40px;
 }
 .mainPublicar h1{
-    width: 300px;
+    width: 275px;
     text-align: center;
 }
 
@@ -1586,6 +1588,9 @@ header{
 .mainGuardados{
     width: 95%;
 }
+.mainGuardados h3{
+    width: 200px;
+}
 .alquilerGuardado{
     flex-direction: column;
     height: auto;
@@ -1615,16 +1620,6 @@ header{
 .opcionesGuardado button:nth-child(1){
     width: 70%;
 }
-.eliminarGuardado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #fff;
-    height: 25px;
-    width: 25px;
-    top: 15px;
-}
 .eliminarTodo{
     display: none;
 }
@@ -1633,7 +1628,7 @@ header{
 }
 @media all and (max-width: 500px){
     .contenedorFormulario h3{
-        width: 320px;
+        width: 260px;
         text-align: center;
     }
 }
