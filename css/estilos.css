@@ -426,10 +426,7 @@ video{
 }
 
 .contenedorPresentacionLugares{
-    width: 1000px;
     height: 100%;
-    margin: auto;
-
 }
 .contenedorPresentacionLugares h1{
     color: #fff;
@@ -462,7 +459,7 @@ video{
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,100px) 130px repeat(2, 100px);
+    grid-template-rows: repeat(2,100px) 150px repeat(2, 100px);
     grid-template-areas:"cordoba cordoba   bsas"
                         "cordoba cordoba   bsas"
                         "norte   patagonia costa"
@@ -557,7 +554,6 @@ video{
 }
 
 .mejoresValoraciones{
-    width: 1000px;
     margin: 60px auto;
 }
 .mejoresValoraciones h3{
@@ -567,24 +563,25 @@ video{
 
 .contenedorMejoresValoraciones{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .alojamientosMejoresValorados{
     display: flex;
-    justify-content: center;
     background: #fff;
-    width: 490px;
+    width: 45%;
+    height: auto;
+    min-height: 250px;
     border-radius: 5px;
     padding: 10px;
-    margin:  10px 0;
+    margin:  10px;
 }
 .alojamientoValoradoImg{
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    height: 180px;
-    width: 190px;
+    height: 230px;
+    width: 250px;
 }
 .alojamientoValoradoImg img{
     object-fit: cover;
@@ -614,8 +611,8 @@ video{
 }
 
 .infoAlojamientoValorado{
-    max-width: 260px;
-    padding-left: 10px;
+    width: 300px;
+    padding-left: 15px;
 }
 .infoAlojamientoValorado h2{
     color: #585757;
@@ -647,10 +644,10 @@ video{
 }
 .infoAlojamientoValorado p{
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 9;
     -webkit-box-orient: vertical; 
     overflow: hidden;
-    font-size: 14px;
+    font-size: 15px;
     color: #6e6e6e;
     line-height: 17px;
 }
@@ -1124,6 +1121,16 @@ video{
 
 /* @media */
 
+@media all and (min-width: 1020px) and (max-width: 1200px){
+  .alojamientosMejoresValorados{
+      width: 49%;
+      margin: 5px 0 5px 1%;
+      
+  }  
+  .alojamientoValoradoImg{
+      height: 257px;
+  }
+}
 @media all and (min-width: 600px) and (max-width:1023px){
 
     
@@ -1149,9 +1156,7 @@ video{
         height: calc(100% - 75%);
     }
     
-    .contenedorPresentacionLugares{
-        width: 580px;
-    }
+
     .contenedorPresentacionLugares h1{
         font-size: 40px;
     }
@@ -1170,15 +1175,10 @@ video{
         font-size: 18px;
     }
     
-    .mejoresValoraciones{
-        width: 580px;
-    }
     
     .alojamientosMejoresValorados{
         flex-direction: column;
         justify-content: center;
-        width: 285px;
-
     }
     .alojamientoValoradoImg{
         width: 100%;
@@ -1274,7 +1274,7 @@ video{
 /* Guardados */
     
 }
-@media all and (min-width: 599px) and (max-width:765px){
+@media all and (min-width: 599px) and (max-width:770px){
     .contenedorVideo{
         top: -175px;	
 
@@ -1283,8 +1283,17 @@ video{
         height: calc(100% - 70%);
 
     }
+    .alojamientosMejoresValorados{
+        width: 100%;
+        margin:  10px 0;
+    }    
+    .infoAlojamientoValorado{
+        width: 100%;
+        padding-left: 0;
+    }
+
 }
-@media all and (max-width:599px){
+@media all and (max-width: 599px){
 
 /* Generales */
 
@@ -1293,13 +1302,11 @@ header{
 }
 .headerCenter{
     height: 100%;
-    width: 100%;
-    flex-direction: column;
 }
 .headerCenterDivs{
     height: 50%;
     width: 100%;
-    justify-content: center;
+    justify-content: center !important;
     position: relative;
 }
 
@@ -1352,9 +1359,6 @@ header{
     width: 100%;
 }
 
-.descuento{
-    width: 95%;
-} 
 
 .logoFooter{
     margin: 0 auto 30px;
@@ -1415,8 +1419,6 @@ header{
 }
 
 .presentacionLugares{
-    max-width: 425px;
-    width: 95%;
     display: flex;
     overflow: auto;
     animation: none;
