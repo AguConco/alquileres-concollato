@@ -1,17 +1,18 @@
 
 /* Generales */
 
-*{
+*:not(i){
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Spinnaker-Regular" !important;
 }
+
 @font-face {
     font-family: "Spinnaker-Regular";
     src: url("./fuentes/Spinnaker-Regular.ttf");
 }
 body{
-    font-family: "Spinnaker-Regular";
     background: #f5f5f5;
 }
 *::selection{
@@ -24,7 +25,7 @@ a{
     text-decoration: none;
 }
 input, select, textarea, button{
-    font-family: "Spinnaker-Regular";
+    font-family: "Spinnaker-Regular" !important;
 }
 main{
     width: 100%;
@@ -37,6 +38,7 @@ main{
     padding-bottom: 10px;
     font-size: 24px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 .bodyInicio{
     display: grid;
@@ -70,16 +72,11 @@ header{
     box-shadow: 0 5px 15px #00000010;
 }
 .headerCenter{
-    width: 1000px;
     height: 65px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .headerCenterDivs{
     height: 100%;
-    display: flex;
-    align-items: center;
 }
 header a, header i{
     color: #585757;
@@ -121,7 +118,9 @@ header a, header i{
 .navegadorNav ul li a{
     padding: 5px;
     display: block;
-    border-radius: 5px;
+}
+.navegadorNav ul li a:hover{
+    color: #585757;
 }
 .pagActual i{
     color: #4bbec5;
@@ -152,6 +151,7 @@ header a, header i{
 .lugares h3{
     color: #585757;
     font-weight: 300;
+    font-size: 20px;
 }
 .lugaresLista{
     position: absolute;
@@ -199,6 +199,7 @@ header a, header i{
 }
 .region:hover{
     border-color: #4bbec5;
+    color: #585757;
 }
 .region:hover + .lugaresListaCiudades, .lugaresListaCiudades:hover{
     display: flex;
@@ -271,6 +272,9 @@ header a, header i{
     display: block;
     padding: 5px;
 }
+.usuarioOpciones li a:hover{
+    color: #585757;
+}
 .usuarioOpciones li a i{
     display: inline-block;
     width: 20px;
@@ -305,15 +309,12 @@ footer a:hover{
     text-decoration: underline;
 }
 .footerCenter{
-    width: 1000px;
-    margin: auto;
     padding: 50px 0;
 }
 
 .descuento{
-    width: 800px;
     height: auto;
-    margin: 0 auto 50px;
+    margin-bottom: 50px;
     background: #fff;
     border-radius: 5px;
     padding: 15px 0;
@@ -354,6 +355,32 @@ footer a:hover{
     border-radius: 5px;
     font-size: 16px;
 }
+.footerDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerDiv div{
+    min-width: 130px;
+}
+.footerDiv div h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footerLista{
+    padding-left: 10px;
+}
+.footerLista li{
+    margin: 10px 0;
+}
+.footerLista li a:hover{
+    color: #fff;
+}
+.footerLista li a i{
+    width: 20px;
+    margin-right: 7px;
+}
+
 .btnEfecto:hover{
     animation: btnEfecto 1S infinite;
     cursor: pointer;
@@ -366,25 +393,6 @@ footer a:hover{
         background: #e7bc3d;
     }
 }
-.footerDiv{
-    display: flex;
-    justify-content: space-evenly;
-}
-.footerDiv div{
-    min-width: 130px;
-}
-
-.footerLista{
-    padding-left: 10px;
-}
-.footerLista li{
-    margin: 10px 0;
-}
-.footerLista li a i{
-    width: 20px;
-    margin-right: 7px;
-}
-
 /* Generales */
 
 /* Inicio */
@@ -430,6 +438,7 @@ video{
     padding: 70px 0;
     animation: iniciar 1s 1;
     transform: scale(.8) translateY(0);
+    font-weight: 600;
 }
 .contenedorPresentacionLugares h1 span{
     color: #4bbec5;
@@ -595,6 +604,7 @@ video{
     color: #000;
     background: #ffffff;
     font-size: 14px;
+    cursor: pointer;
 }
 .guardar:hover{
     background: #ffffffaa;
@@ -611,6 +621,7 @@ video{
     color: #585757;
     line-height: 25px;
     font-size: 20px;
+    font-weight: 600;
 }
 .valoracion{
     font-size: 13px;
@@ -641,6 +652,7 @@ video{
     overflow: hidden;
     font-size: 14px;
     color: #6e6e6e;
+    line-height: 17px;
 }
 
 /* Inicio */
@@ -650,6 +662,7 @@ video{
 .contenedorFormulario{
     width: 780px;
     margin: 60px auto;
+
 }
 .contenedorFormulario h3{
     width: 615px;
@@ -1113,9 +1126,6 @@ video{
 
 @media all and (min-width: 600px) and (max-width:1023px){
 
-    .headerCenter{
-        width: 580px;
-    }
     
     .logoHeader{
         width: 35px;
@@ -1130,14 +1140,6 @@ video{
         min-width: 400px;
     }    
 
-
-
-    .footerCenter{
-        width: 580px;
-    }
-    .descuento{
-        width: 100%;
-    }
     
     /* Generales */
     
