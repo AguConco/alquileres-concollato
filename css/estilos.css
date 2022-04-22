@@ -69,7 +69,7 @@ header{
     box-shadow: 0 5px 15px #00000010;
 }
 .headerCenter{
-    width: 960px;
+    width: 1000px;
     height: 65px;
     margin: auto;
     display: flex;
@@ -304,7 +304,7 @@ footer a:hover{
     text-decoration: underline;
 }
 .footerCenter{
-    width: 960px;
+    width: 1000px;
     margin: auto;
     padding: 50px 0;
 }
@@ -417,7 +417,7 @@ video{
 }
 
 .contenedorPresentacionLugares{
-    width: 960px;
+    width: 1000px;
     height: 100%;
     margin: auto;
 
@@ -547,7 +547,7 @@ video{
 }
 
 .mejoresValoraciones{
-    width: 960px;
+    width: 1000px;
     margin: 60px auto;
 }
 .mejoresValoraciones h3{
@@ -563,7 +563,7 @@ video{
     display: flex;
     justify-content: center;
     background: #fff;
-    width: 470px;
+    width: 490px;
     border-radius: 5px;
     padding: 10px;
     margin:  10px 0;
@@ -718,7 +718,7 @@ video{
 .preguntasListas{
     display: block;
     margin: 40px auto;
-    width: 960px;
+    width: 1000px;
 }
 .preguntasListas li{
     font-size: 20px;
@@ -733,10 +733,10 @@ video{
 /* Explorar */
 
 .mainExplorar{
-    width: 960px;
+    width: 1000px;
     margin: 40px auto;
     display: grid;
-    grid-template-columns: 290px repeat(2,1fr);
+    grid-template-columns: 275px auto;
     grid-template-rows: 60px auto; 
     gap: 10px;
 }
@@ -778,6 +778,9 @@ video{
     justify-content: space-between;
     font-size: 16px;
 }
+.filtroPersonas input{
+    width: 50px;
+}
 .aplicar{
     color: #fff;
     background: #e7bc3d;
@@ -800,12 +803,12 @@ video{
     align-content: flex-start;
 }
 .alojamientoExplorar{
-    width: 250px;
+    width: 230px;
     height: 300px;
     padding: 10px;
     background: #fff;
     border-radius: 5px;
-    margin: 0 10px 10px 0;
+    margin: 0 5px 5px 0;
     color: #585757;
 }
 .alojamientoExplorar .guardar{
@@ -837,7 +840,8 @@ video{
     font-weight: 300;
     display: flex;
     flex-direction: column;
-    margin: 5px 0;
+    margin: 5px 0 0;
+    line-height: 18px;
 }
 .alojamientoExplorar h2 span{
     font-size: 12px;
@@ -855,7 +859,7 @@ video{
 /* Publicar */
 
 .mainPublicar{
-    width: 960px;
+    width: 1000px;
     margin: 80px auto;
     color: #585757;
 } 
@@ -995,7 +999,7 @@ video{
 /* Guardados */
 
 .mainGuardados{
-    width: 960px;
+    width: 1000px;
     margin: 80px auto;
 }
 .mainGuardados h3{
@@ -1007,14 +1011,19 @@ video{
     border-radius: 5px;
     padding: 10px;
     display: flex;
+    align-items: center;
     position: relative;
     margin-bottom: 10px;
+    height: 170px;
+}
+.alquilerGuardado input{
+    margin-right: 15px;
 }
 .alquilerGuardadoImg{
     overflow: hidden;
     border-radius: 5px;
     height: 150px;
-    width: 200px;
+    min-width: 200px;
 
 }
 .alquilerGuardadoImg img{
@@ -1028,6 +1037,7 @@ video{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 100%;
 }
 .infoGuardado h5{
     font-size: 25px;
@@ -1042,10 +1052,12 @@ video{
     font-weight: 300;
     display: flex;
     flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 20px;
 }
 .infoGuardado h2 span{
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     color: #9e9e9e;
 }
 
@@ -1080,19 +1092,26 @@ video{
 .eliminarTodo{
     width: 100%;
     display: flex;
-    justify-content: end;
-    margin-bottom: 20px;
+    justify-content: start;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
 }
 .eliminarTodo button{
     background: none;
     border: none;
     font-size: 16px;
-    padding: 0 10px;
+    padding: 5px;
+    margin-left: 10px;
     color: #585757;
 
 }
 .eliminarTodo button:hover{
-    color: #f11;
+    background: #4bbec520;
+    border-radius: 5px;
 }
 
 /* Guardados */
@@ -1569,6 +1588,10 @@ header{
 }
 .alquilerGuardado{
     flex-direction: column;
+    height: auto;
+}
+.alquilerGuardado input{
+    display: none;
 }
 .alquilerGuardadoImg{
     width: 100%;
@@ -1601,6 +1624,9 @@ header{
     height: 25px;
     width: 25px;
     top: 15px;
+}
+.eliminarTodo{
+    display: none;
 }
 
 /* Guardados */
