@@ -1,17 +1,18 @@
 
 /* Generales */
 
-*{
+*:not(i){
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Spinnaker-Regular" !important;
 }
+
 @font-face {
     font-family: "Spinnaker-Regular";
     src: url("./fuentes/Spinnaker-Regular.ttf");
 }
 body{
-    font-family: "Spinnaker-Regular";
     background: #f5f5f5;
 }
 *::selection{
@@ -24,7 +25,7 @@ a{
     text-decoration: none;
 }
 input, select, textarea, button{
-    font-family: "Spinnaker-Regular";
+    font-family: "Spinnaker-Regular" !important;
 }
 main{
     width: 100%;
@@ -37,6 +38,7 @@ main{
     padding-bottom: 10px;
     font-size: 24px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 .bodyInicio{
     display: grid;
@@ -70,16 +72,11 @@ header{
     box-shadow: 0 5px 15px #00000010;
 }
 .headerCenter{
-    width: 1000px;
     height: 65px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .headerCenterDivs{
     height: 100%;
-    display: flex;
-    align-items: center;
 }
 header a, header i{
     color: #585757;
@@ -121,7 +118,9 @@ header a, header i{
 .navegadorNav ul li a{
     padding: 5px;
     display: block;
-    border-radius: 5px;
+}
+.navegadorNav ul li a:hover{
+    color: #585757;
 }
 .pagActual i{
     color: #4bbec5;
@@ -152,6 +151,7 @@ header a, header i{
 .lugares h3{
     color: #585757;
     font-weight: 300;
+    font-size: 20px;
 }
 .lugaresLista{
     position: absolute;
@@ -199,6 +199,7 @@ header a, header i{
 }
 .region:hover{
     border-color: #4bbec5;
+    color: #585757;
 }
 .region:hover + .lugaresListaCiudades, .lugaresListaCiudades:hover{
     display: flex;
@@ -271,6 +272,9 @@ header a, header i{
     display: block;
     padding: 5px;
 }
+.usuarioOpciones li a:hover{
+    color: #585757;
+}
 .usuarioOpciones li a i{
     display: inline-block;
     width: 20px;
@@ -305,15 +309,12 @@ footer a:hover{
     text-decoration: underline;
 }
 .footerCenter{
-    width: 1000px;
-    margin: auto;
     padding: 50px 0;
 }
 
 .descuento{
-    width: 800px;
     height: auto;
-    margin: 0 auto 50px;
+    margin-bottom: 50px;
     background: #fff;
     border-radius: 5px;
     padding: 15px 0;
@@ -354,6 +355,32 @@ footer a:hover{
     border-radius: 5px;
     font-size: 16px;
 }
+.footerDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerDiv div{
+    min-width: 130px;
+}
+.footerDiv div h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footerLista{
+    padding-left: 10px;
+}
+.footerLista li{
+    margin: 10px 0;
+}
+.footerLista li a:hover{
+    color: #fff;
+}
+.footerLista li a i{
+    width: 20px;
+    margin-right: 7px;
+}
+
 .btnEfecto:hover{
     animation: btnEfecto 1S infinite;
     cursor: pointer;
@@ -366,25 +393,6 @@ footer a:hover{
         background: #e7bc3d;
     }
 }
-.footerDiv{
-    display: flex;
-    justify-content: space-evenly;
-}
-.footerDiv div{
-    min-width: 130px;
-}
-
-.footerLista{
-    padding-left: 10px;
-}
-.footerLista li{
-    margin: 10px 0;
-}
-.footerLista li a i{
-    width: 20px;
-    margin-right: 7px;
-}
-
 /* Generales */
 
 /* Inicio */
@@ -418,10 +426,7 @@ video{
 }
 
 .contenedorPresentacionLugares{
-    width: 1000px;
     height: 100%;
-    margin: auto;
-
 }
 .contenedorPresentacionLugares h1{
     color: #fff;
@@ -430,6 +435,7 @@ video{
     padding: 70px 0;
     animation: iniciar 1s 1;
     transform: scale(.8) translateY(0);
+    font-weight: 600;
 }
 .contenedorPresentacionLugares h1 span{
     color: #4bbec5;
@@ -453,7 +459,7 @@ video{
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,100px) 130px repeat(2, 100px);
+    grid-template-rows: repeat(2,100px) 150px repeat(2, 100px);
     grid-template-areas:"cordoba cordoba   bsas"
                         "cordoba cordoba   bsas"
                         "norte   patagonia costa"
@@ -548,7 +554,6 @@ video{
 }
 
 .mejoresValoraciones{
-    width: 1000px;
     margin: 60px auto;
 }
 .mejoresValoraciones h3{
@@ -558,24 +563,25 @@ video{
 
 .contenedorMejoresValoraciones{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .alojamientosMejoresValorados{
     display: flex;
-    justify-content: center;
     background: #fff;
-    width: 490px;
+    width: 45%;
+    height: auto;
+    min-height: 250px;
     border-radius: 5px;
     padding: 10px;
-    margin:  10px 0;
+    margin:  10px;
 }
 .alojamientoValoradoImg{
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    height: 180px;
-    width: 190px;
+    height: 230px;
+    width: 250px;
 }
 .alojamientoValoradoImg img{
     object-fit: cover;
@@ -595,6 +601,7 @@ video{
     color: #000;
     background: #ffffff;
     font-size: 14px;
+    cursor: pointer;
 }
 .guardar:hover{
     background: #ffffffaa;
@@ -604,13 +611,14 @@ video{
 }
 
 .infoAlojamientoValorado{
-    max-width: 260px;
-    padding-left: 10px;
+    width: 300px;
+    padding-left: 15px;
 }
 .infoAlojamientoValorado h2{
     color: #585757;
     line-height: 25px;
     font-size: 20px;
+    font-weight: 600;
 }
 .valoracion{
     font-size: 13px;
@@ -636,11 +644,12 @@ video{
 }
 .infoAlojamientoValorado p{
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 9;
     -webkit-box-orient: vertical; 
     overflow: hidden;
-    font-size: 14px;
+    font-size: 15px;
     color: #6e6e6e;
+    line-height: 17px;
 }
 
 /* Inicio */
@@ -650,6 +659,7 @@ video{
 .contenedorFormulario{
     width: 780px;
     margin: 60px auto;
+
 }
 .contenedorFormulario h3{
     width: 615px;
@@ -737,35 +747,31 @@ video{
 /* Explorar */
 
 .mainExplorar{
-    width: 1000px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 275px auto;
-    grid-template-rows: 60px auto; 
-    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
 }
-.contenedoFiltros{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;  
+.contenedorFiltros{
     color: #585757;
     background: #fff;
     border-radius: 5px;
     padding: 10px;
-    max-height: 1090px;
 
 }
-.contenedoFiltros h3{
+.contenedrFiltros h3{
     font-size: 22px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
     font-weight: 300;
 }
-.contenedoFiltros h3 i{
+.contenedorFiltros h3 i{
     -webkit-text-stroke: 1.5px #585757;
     color: #fff;
     font-size: 20px;
+}
+.filtros{
+    padding-right: 5px;
 }
 .filtros h4{
     font-size: 18px;
@@ -780,7 +786,9 @@ video{
 .filtrosDiv label, .filtrosDiv div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 16px;
+    cursor: pointer;
 }
 .filtroPersonas input{
     width: 50px;
@@ -793,15 +801,12 @@ video{
     padding: 10px;
     display: block;
     width: 100px;
-    margin: 30px auto 0;
+    margin: 30px auto 5px;
     font-size: 16px;
 }
 
 .contenedorAlojamientosExplorar{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3; 
+    margin-left: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -854,9 +859,20 @@ video{
 .alojamientoExplorar:hover{
     box-shadow: 0 5px 10px #00000010;
     transform: scale(1.02);
+    color: #585757;
 }
 .alojamientoExplorar:hover .guardar{
     display: flex;
+}
+.page-item a{
+    color: #4bbec5;
+}
+.page-item a:hover{
+    color: #4bbec5;
+}
+.page-item a:focus{
+    color: #4bbec5;
+    box-shadow: none;
 }
 /* Explorar */
 
@@ -921,6 +937,7 @@ video{
     display: flex;
     justify-content: space-around;
     margin: 40px auto 80px;
+    position: relative;
 }
 .progreso div{
     border: 1px solid #9e9e9e;
@@ -932,6 +949,7 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f5f5f5;
 }
 .progreso .progresoActual{
     color: #4bbec5;
@@ -953,8 +971,8 @@ video{
     text-align: center;
 }
 .progreso div:nth-child(3) span{
-    bottom: -35px;
-
+    bottom: -20px;
+    width: 200px;
 }
 
 .datosProritarios input, .datosContacto input{
@@ -1111,11 +1129,18 @@ video{
 
 /* @media */
 
+@media all and (min-width: 1020px) and (max-width: 1200px){
+  .alojamientosMejoresValorados{
+      width: 49%;
+      margin: 5px 0 5px 1%;
+      
+  }  
+  .alojamientoValoradoImg{
+      height: 257px;
+  }
+}
 @media all and (min-width: 600px) and (max-width:1023px){
 
-    .headerCenter{
-        width: 580px;
-    }
     
     .logoHeader{
         width: 35px;
@@ -1130,14 +1155,6 @@ video{
         min-width: 400px;
     }    
 
-
-
-    .footerCenter{
-        width: 580px;
-    }
-    .descuento{
-        width: 100%;
-    }
     
     /* Generales */
     
@@ -1147,9 +1164,7 @@ video{
         height: calc(100% - 75%);
     }
     
-    .contenedorPresentacionLugares{
-        width: 580px;
-    }
+
     .contenedorPresentacionLugares h1{
         font-size: 40px;
     }
@@ -1175,15 +1190,10 @@ video{
         font-size: 18px;
     }
     
-    .mejoresValoraciones{
-        width: 580px;
-    }
     
     .alojamientosMejoresValorados{
         flex-direction: column;
         justify-content: center;
-        width: 285px;
-
     }
     .alojamientoValoradoImg{
         width: 100%;
@@ -1219,27 +1229,18 @@ video{
     /* Explorar */
 
     .mainExplorar{
-        width: 580px;
-    }
-    .contenedoFiltros{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;  
+        display: block;
     }
     .formularioFiltros{
         display: none;
     }
 
     .contenedorAlojamientosExplorar{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3; 
+        margin-top: 10px;
+        margin-left: 0;
         justify-content: space-between;
     }
     .alojamientoExplorar{
-        width: 48.9%;
         margin: 0 0 10px;
     }
 
@@ -1256,6 +1257,10 @@ video{
 }
 .datosTel select{
     width: 32%;
+}
+.progreso div:nth-child(3) span{
+    bottom: -42px;
+    width: 150px;
 }
 
 /* Publicar */
@@ -1279,7 +1284,7 @@ video{
 /* Guardados */
     
 }
-@media all and (min-width: 599px) and (max-width:765px){
+@media all and (min-width: 599px) and (max-width:770px){
     .contenedorVideo{
         top: -175px;	
 
@@ -1288,8 +1293,20 @@ video{
         height: calc(100% - 70%);
 
     }
+    .alojamientoExplorar{
+        width: 49%;
+    }
+    .alojamientosMejoresValorados{
+        width: 100%;
+        margin:  10px 0;
+    }    
+    .infoAlojamientoValorado{
+        width: 100%;
+        padding-left: 0;
+    }
+
 }
-@media all and (max-width:599px){
+@media all and (max-width: 599px){
 
 /* Generales */
 
@@ -1298,13 +1315,11 @@ header{
 }
 .headerCenter{
     height: 100%;
-    width: 100%;
-    flex-direction: column;
 }
 .headerCenterDivs{
     height: 50%;
     width: 100%;
-    justify-content: center;
+    justify-content: center !important;
     position: relative;
 }
 
@@ -1357,9 +1372,6 @@ header{
     width: 100%;
 }
 
-.descuento{
-    width: 95%;
-} 
 
 .logoFooter{
     margin: 0 auto 30px;
@@ -1420,8 +1432,6 @@ header{
 }
 
 .presentacionLugares{
-    max-width: 425px;
-    width: 95%;
     display: flex;
     overflow: auto;
     animation: none;
@@ -1501,24 +1511,16 @@ header{
 
     .mainExplorar{
         width: 95%;
-
-    }
-    .contenedoFiltros{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;  
+        display: block;
     }
     .formularioFiltros{
         display: none;
     }
 
     .contenedorAlojamientosExplorar{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3; 
         justify-content: center;
+        margin: 10px 0 0;
+
     }
     .alojamientoExplorar{
         width: 100%;
@@ -1553,6 +1555,10 @@ header{
     font-size: 12px;
     width: 80px;
     bottom: -35px;
+}
+.progreso div:nth-child(3) span{
+    bottom: -35px;
+    width: 80px;
 }
 .progreso div:nth-child(4) span{
     bottom: -20px;
