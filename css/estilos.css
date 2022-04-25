@@ -747,35 +747,31 @@ video{
 /* Explorar */
 
 .mainExplorar{
-    width: 1000px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 275px auto;
-    grid-template-rows: 60px auto; 
-    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
 }
-.contenedoFiltros{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;  
+.contenedorFiltros{
     color: #585757;
     background: #fff;
     border-radius: 5px;
     padding: 10px;
-    max-height: 1090px;
 
 }
-.contenedoFiltros h3{
+.contenedrFiltros h3{
     font-size: 22px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
     font-weight: 300;
 }
-.contenedoFiltros h3 i{
+.contenedorFiltros h3 i{
     -webkit-text-stroke: 1.5px #585757;
     color: #fff;
     font-size: 20px;
+}
+.filtros{
+    padding-right: 5px;
 }
 .filtros h4{
     font-size: 18px;
@@ -790,7 +786,9 @@ video{
 .filtrosDiv label, .filtrosDiv div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 16px;
+    cursor: pointer;
 }
 .filtroPersonas input{
     width: 50px;
@@ -803,15 +801,12 @@ video{
     padding: 10px;
     display: block;
     width: 100px;
-    margin: 30px auto 0;
+    margin: 30px auto 5px;
     font-size: 16px;
 }
 
 .contenedorAlojamientosExplorar{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3; 
+    margin-left: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -864,9 +859,20 @@ video{
 .alojamientoExplorar:hover{
     box-shadow: 0 5px 10px #00000010;
     transform: scale(1.02);
+    color: #585757;
 }
 .alojamientoExplorar:hover .guardar{
     display: flex;
+}
+.page-item a{
+    color: #4bbec5;
+}
+.page-item a:hover{
+    color: #4bbec5;
+}
+.page-item a:focus{
+    color: #4bbec5;
+    box-shadow: none;
 }
 /* Explorar */
 
@@ -931,6 +937,7 @@ video{
     display: flex;
     justify-content: space-around;
     margin: 40px auto 80px;
+    position: relative;
 }
 .progreso div{
     border: 1px solid #9e9e9e;
@@ -942,6 +949,7 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f5f5f5;
 }
 .progreso .progresoActual{
     color: #4bbec5;
@@ -963,8 +971,8 @@ video{
     text-align: center;
 }
 .progreso div:nth-child(3) span{
-    bottom: -35px;
-
+    bottom: -20px;
+    width: 200px;
 }
 
 .datosProritarios input, .datosContacto input{
@@ -1214,27 +1222,18 @@ video{
     /* Explorar */
 
     .mainExplorar{
-        width: 580px;
-    }
-    .contenedoFiltros{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;  
+        display: block;
     }
     .formularioFiltros{
         display: none;
     }
 
     .contenedorAlojamientosExplorar{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3; 
+        margin-top: 10px;
+        margin-left: 0;
         justify-content: space-between;
     }
     .alojamientoExplorar{
-        width: 48.9%;
         margin: 0 0 10px;
     }
 
@@ -1251,6 +1250,10 @@ video{
 }
 .datosTel select{
     width: 32%;
+}
+.progreso div:nth-child(3) span{
+    bottom: -42px;
+    width: 150px;
 }
 
 /* Publicar */
@@ -1282,6 +1285,9 @@ video{
     .unirVideo{
         height: calc(100% - 70%);
 
+    }
+    .alojamientoExplorar{
+        width: 49%;
     }
     .alojamientosMejoresValorados{
         width: 100%;
@@ -1507,24 +1513,16 @@ header{
 
     .mainExplorar{
         width: 95%;
-
-    }
-    .contenedoFiltros{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;  
+        display: block;
     }
     .formularioFiltros{
         display: none;
     }
 
     .contenedorAlojamientosExplorar{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3; 
         justify-content: center;
+        margin: 10px 0 0;
+
     }
     .alojamientoExplorar{
         width: 100%;
@@ -1559,6 +1557,10 @@ header{
     font-size: 12px;
     width: 80px;
     bottom: -35px;
+}
+.progreso div:nth-child(3) span{
+    bottom: -35px;
+    width: 80px;
 }
 .progreso div:nth-child(4) span{
     bottom: -20px;

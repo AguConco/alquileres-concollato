@@ -8,13 +8,15 @@
     <script src="https://kit.fontawesome.com/68df40820b.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="../multimedia/img/logo-aa_h.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
 
 </head>
 <body>
-    <header>
-        <div class="headerCenter">
-            <div class="headerCenterDivs">
+    <header class="container-fluid">
+        <div class="headerCenter container d-flex justify-content-between align-items-center">
+            <div class="headerCenterDivs d-flex align-items-center justify-content-start col-xs-12 col-md-6 col-lg-6">
                 <div class="navegador">
                     <div class="navegadorMenu">
                         <i class="fas fa-bars"></i>
@@ -159,7 +161,7 @@
                     </ul>
                 </div>    
             </div>
-            <div class="headerCenterDivs">
+            <div class="headerCenterDivs d-flex align-items-center justify-content-end col-xs-12 col-md-6 col-lg-6">
                 <div class="buscador">
                     <form action="#" method="get" class="buscadorFormulario">
                         <input type="search" class="buscadorSearch" name="search" placeholder="¿A donde querés ir?">
@@ -225,9 +227,9 @@
             <p>Todos los datos que cargan aquí serán tus puntos de contacto con los huéspedes, por esto es importante que coloques tus canales frecuentes de comunicación. Mientras antes respondas las reservas tenés mas posibilidad de reservar!</p>
         </div>
     </main>
-    <footer>
-        <div class="footerCenter">
-            <div class="descuento">
+    <footer class="container-fluid">
+        <div class="footerCenter container">
+            <div class="descuento col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
                 <div class="logoFooter">
                     <img src="../multimedia/img/logo-aa_h.svg" alt="Logo del sitio">  
                 </div>
@@ -273,5 +275,7 @@
             </div>
         </div>
     </footer>
+    
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
