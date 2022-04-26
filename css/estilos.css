@@ -734,9 +734,7 @@ video {
 /* Contacto */
 
 .contenedorFormulario {
-    width: 780px;
     margin: 60px auto;
-
 }
 
 .contenedorFormulario h3 {
@@ -744,11 +742,13 @@ video {
     text-align: center;
 
 }
-
+.formularioContacto label{
+    color: #585757;
+    top: 5px;
+}
 .formularioContacto input,
 .formularioContacto textarea,
 .formularioContacto select {
-    padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -768,13 +768,13 @@ video {
 }
 
 .rol {
-    width: 100%;
     appearance: none;
+    padding: 16px;
 }
 
 .contenedorRol i {
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -821,7 +821,6 @@ video {
 .preguntasListas {
     display: block;
     margin: 40px auto;
-    width: 1000px;
 }
 
 .preguntasListas li {
@@ -1134,6 +1133,15 @@ video {
     border-radius: 5px;
     width: 98%;
 }
+.contenedorSelectTel{
+    position: relative;
+}
+.contenedorSelectTel i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .datosTel input {
     font-size: 16px;
@@ -1141,6 +1149,9 @@ video {
     border-radius: 5px;
     margin: 5px 0;
     width: 98%;
+}
+#caract + label, #numero + label{
+    top: 5px;
 }
 
 .siguientePaso {
@@ -1381,18 +1392,11 @@ video {
 
     /* Contacto */
 
-    .contenedorFormulario {
-        width: 580px;
-    }
-
     .contenedorFormulario h3 {
         width: 440px;
 
     }
 
-    .preguntasListas {
-        width: 580px;
-    }
 
     /* Explorar */
 
@@ -1699,13 +1703,8 @@ video {
     .datosFormularioContacto {
         width: 100%;
     }
-
-    .preguntasGuias p {
-        width: 95%;
-    }
-
-    .preguntasListas {
-        width: 95%;
+    .datosFormularioContacto label, #consulta +label{
+        padding-left: 0px;
     }
 
     /* Contacto */
@@ -1778,7 +1777,7 @@ video {
         margin: 5px 2.5%;
     }
 
-    .datosContacto input+span {
+    .form-floating + span {
         padding: 15px;
 
     }

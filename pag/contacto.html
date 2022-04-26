@@ -184,29 +184,44 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="contenedorFormulario">
+    <main class="container">
+        <section class="contenedorFormulario col-12 col-md-10">
             <h3 class="subtitulo">Tenemos nuestro equipo a tu disposición</h3>
             <form action="#" method="post" class="formularioContacto">
                 <div class="contenedorRol">
-                    <select name="rol" class="rol">
+                    <select class="rol form-control" name="rol">
                         <option value="dueño">Dueño de un alojamiento</option>
                         <option value="cliente">Cliente / alquilé anteriormente</option>
                     </select>
                     <i class="fas fa-caret-down"></i>
                 </div>
-                <div class="datosFormularioContacto"><input type="text" name="nombre" placeholder="Nombre y apellido"></div>
-                <div class="datosFormularioContacto"><input type="email" name="correo" placeholder="Correo electrónico"></div>
-                <div class="datosFormularioContacto"><input type="tel" name="telefono" placeholder="Teléfono / Celular"></div>
-                <div class="datosFormularioContacto"><input type="text" placeholder="Localidad"></div>
-                <textarea name="consulta" cols="30" rows="10" placeholder="Deja tu consulta"></textarea>
+                <div class="datosFormularioContacto form-floating">
+                    <input class="form-control" autocomplete="off" type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+                    <label for="nombre">Nombre y apellido</label>
+                </div>
+                <div class="datosFormularioContacto form-floating">
+                    <input class="form-control" autocomplete="off" type="email" name="correo" id="correo" placeholder="Correo electrónico">
+                    <label for="correo">Correo electrónico</label>
+                </div>
+                <div class="datosFormularioContacto form-floating">
+                    <input class="form-control" autocomplete="off" type="tel" name="telefono" id="tel" placeholder="Teléfono / Celular">
+                    <label for="tel">Teléfono / Celular</label>
+                </div>
+                <div class="datosFormularioContacto form-floating">
+                    <input class="form-control" autocomplete="off" type="text" id="localidad" placeholder="Localidad">
+                    <label for="localidad">Localidad</label>
+                </div>
+                <div class="form-floating col-12">
+                    <textarea class="form-control" autocomplete="off" name="consulta" id="consulta" cols="30" rows="10" placeholder="Deja tu consulta"></textarea>
+                    <label for="consulta">Deja tu consulta</label>
+                </div>
                 <button type="submit" class="btnEfecto">Enviar</button>
             </form>
         </section>
-        <section class="preguntasGuias">
+        <section class="preguntasGuias col-12 col-md-10 m-auto">
             <h3 class="subtitulo">Preguntas guía</h3>
             <p>Preguntas que te pueden ayudar a la hora de alquilar un alojamiento</p>
-            <ul class="preguntasListas">
+            <ul class="preguntasListas col-12">
                 <li>¿Qué horarios de llegada y salida están previstos?</li>
                 <li>¿Quién es la persona de contacto para los problemas in situ?</li>
                 <li>¿Se proporciona ropa de cama, toallas o menajes de cocina?</li>
