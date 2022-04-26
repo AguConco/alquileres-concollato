@@ -33,12 +33,8 @@ select,
 textarea,
 button {
     font-family: "Spinnaker-Regular" !important;
-}
-
-main {
-    width: 100%;
-    min-height: 800px;
-    /* Cambiar */
+    outline: none;
+    color: #585757;
 }
 
 .subtitulo {
@@ -50,31 +46,6 @@ main {
     text-transform: uppercase;
     font-weight: 600;
 }
-
-.bodyInicio {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, auto);
-
-
-}
-
-.bodyInicio header {
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-}
-
-.bodyInicio main {
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.bodyInicio footer {
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-
 
 header {
     height: 65px;
@@ -1031,8 +1002,8 @@ video {
 /* Publicar */
 
 .mainPublicar {
-    width: 1000px;
-    margin: 80px auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
     color: #585757;
 }
 
@@ -1062,7 +1033,7 @@ video {
     border-radius: 5px;
     padding: 10px;
     left: -260px;
-    top: -150px;
+    top: -200px;
     z-index: 1000;
 }
 
@@ -1149,7 +1120,7 @@ video {
     margin: 5px 0;
 }
 
-.datosContacto input+span {
+.form-floating span {
     color: #9e9e9e;
     font-size: 14px;
     padding: 10px;
@@ -1157,20 +1128,19 @@ video {
 }
 
 .datosTel select {
-    width: 33%;
-    padding: 10px;
+    padding: 16px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 98%;
 }
 
 .datosTel input {
-    padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 33%;
     margin: 5px 0;
+    width: 98%;
 }
 
 .siguientePaso {
@@ -1448,17 +1418,10 @@ video {
 
 
     /* Publicar */
-    .mainPublicar {
-        width: 580px;
-    }
 
     .mainPublicar h1 {
         width: 370px;
         text-align: center;
-    }
-
-    .datosTel select {
-        width: 32%;
     }
 
     .progreso div:nth-child(3) span {
@@ -1512,6 +1475,13 @@ video {
         width: 100%;
         padding-left: 0;
     }
+    .datosTel select {
+        width: 100%;
+    }
+    .datosTel input {
+        width: 100%;
+    }
+
 
 }
 
@@ -1764,10 +1734,10 @@ video {
 
     /* Explorar */
     /* Publicar */
-    .mainPublicar {
-        width: 100%;
-    }
 
+    label{
+        left: 16px !important;
+    }
     .infoPublicar {
         right: 40px;
     }
@@ -1776,15 +1746,9 @@ video {
         width: 275px;
         text-align: center;
     }
-
-    .progreso {
-        width: 100%;
-    }
-
     .infoPublicar p {
-
         left: -200px;
-        top: -200px;
+        top: -250px;
 
     }
 

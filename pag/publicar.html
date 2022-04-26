@@ -185,40 +185,62 @@
             </div>
         </div>
     </header>
-    <main class="mainPublicar">
-        <div>
+    <main class="mainPublicar container">
+        <div class="col-12 col-md-10 m-auto">
             <h1 class="subtitulo">¡Hola! Vamos a cargar tu anuncio paso a paso</h1>
             <h3>Paso 1</h3>
             <span>Estos datos son los que va a utilizar el huésped para comunicarse y reservar. Recordá revisarlos con frecuncia.</span>
         </div>
-        <div class="progreso">
+        <div class="progreso col-12 col-md-10">
             <div class="progresoActual"><i class="far fa-clipboard"></i><span>Datos generales</span></div>
             <div><i class="fas fa-photo-video"></i><span>Fotos y videos</span></div>
             <div><i class="fas fa-tasks"></i><span>Términos y Condiciones</span></div>
             <div><i class="far fa-check-circle"></i><span>Finalizar</span></div>
         </div>
-        <form action="#" method="post" class="formularioPublicar">
+        <form action="#" method="post" class="formularioPublicar col-12 col-md-10 m-auto">
             <div class="datosProritarios">
                 <h3>Datos del propietario</h3>
                 <span>Son los datos del dueño de la propiedad. los mismos no son visibles para el usuario.</span>
-                <input type="text" name="nombre" id="" placeholder="Nombre">
-                <input type="text" name="apellido" id="" placeholder="Apellido">
-                <input type="number" name="dni" id="" placeholder="DNI">    
+                <div class="form-floating">
+                    <input class="form-control" autocomplete="off" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" autocomplete="off" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    <label for="apellido">Apellido</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" autocomplete="off" type="number" name="dni" id="dni" placeholder="DNI"> 
+                    <label for="dni">DNI</label>   
+                </div>
             </div>
             <div class="datosContacto">
                 <h3>Datos del Contacto</h3>
                 <span>Son los datos que va a usar el usuario para contactarse</span>
-                <input type="text" name="contacto" id="" placeholder="Nombre de contacto">
+                <div class="form-floating">
+                    <input class="form-control" autocomplete="off" type="text" name="contacto" id="contacto" placeholder="Nombre de contacto">
+                    <label for="contacto">Nombre de contacto</label>
+                </div>
                 <span>Sólo nombre, sin apellido.</span>
             </div>
             <div class="datosTel">
-                <h3>Teléfono Celular y Fijo</h3>
-                <select name="tel" id="">
-                    <option value="1">Celular</option>
-                    <option value="2">Fijo</option>
-                </select>
-                <input type="number" name="caract" id="" placeholder="Caract.">
-                <input type="number" name="numero" id="" placeholder="Número">
+                <h3 class="mb-4">Teléfono Celular y Fijo</h3>
+                <div class="d-md-flex align-items-center justify-content-between">
+                    <div class="col-12 col-md-4">
+                        <select class="form-control" name="tel" id="">
+                            <option value="1">Celular</option>
+                            <option value="2">Fijo</option>
+                        </select>
+                    </div>
+                    <div class="form-floating col-12 col-md-4">
+                        <input class="form-control" autocomplete="off" type="number" name="caract" id="caract" placeholder="Caract.">
+                        <label for="caract">Caract.</label>
+                    </div>
+                    <div class="form-floating col-12 col-md-4">
+                        <input class="form-control" autocomplete="off" type="number" name="numero" id="numero" placeholder="Número">
+                        <label for="numero">Número</label>
+                    </div>
+                </div>
             </div>
             <button class="siguientePaso btnEfecto">Siguiente</button>
         </form>
