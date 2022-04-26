@@ -1171,7 +1171,6 @@ video {
 /* Guardados */
 
 .mainGuardados {
-    width: 1000px;
     margin: 80px auto;
 }
 
@@ -1257,7 +1256,6 @@ video {
 }
 
 .eliminarTodo {
-    width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -1437,9 +1435,6 @@ video {
 
     /* Guardados */
 
-    .mainGuardados {
-        width: 580px;
-    }
 
     .alquilerGuardadoImg {
         min-width: 200px;
@@ -1796,9 +1791,6 @@ video {
 
     /* Guardados */
 
-    .mainGuardados {
-        width: 95%;
-    }
 
     .mainGuardados h3 {
         width: 200px;
