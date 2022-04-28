@@ -1,0 +1,164 @@
+.mainExplorar {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contenedorFiltros {
+    color: $colorLetras;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+
+    h3 {
+        font-size: 21px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        font-weight: 300;
+
+        i {
+            -webkit-text-stroke: 1.5px $colorLetras;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+}
+
+.filtros {
+    padding-right: 5px;
+
+    h4 {
+        font-size: 18px;
+        margin: 20px 0 10px;
+    }
+}
+
+.filtrosDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 10px;
+
+    label,
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.filtroPersonas {
+    input {
+        width: 50px;
+    }
+}
+
+.aplicar {
+    color: #fff;
+    background: $colorPrincipal1;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    display: block;
+    width: 100px;
+    margin: 30px auto 5px;
+    font-size: 16px;
+}
+
+.contenedorAlojamientosExplorar {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.alojamientoExplorar {
+    width: 230px;
+    height: 300px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 5px 5px 0;
+    color: $colorLetras;
+
+    .guardar {
+        top: 20px;
+        left: 20px;
+    }
+
+    h5 {
+        font-size: 22px;
+
+        span {
+            font-size: 14px;
+            font-weight: 300;
+            color: #ccc;
+        }
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0 0;
+        line-height: 18px;
+
+        span {
+            font-size: 12px;
+            color: #ccc;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 5px 10px #00000010;
+        transform: scale(1.02);
+        color: $colorLetras;
+
+        .guardar {
+            display: flex;
+        }
+    }
+}
+
+.alojamientoExplorarImg {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+.page-item {
+    a {
+        color: $colorPrincipal2;
+
+        &:hover {
+            color: $colorPrincipal2;
+        }
+
+        &:focus {
+            color: $colorPrincipal2;
+            box-shadow: none;
+        }
+    }
+}
+
+.navPaginacion {
+    min-width: 100%;
+
+    ul {
+        width: 164px;
+        margin: 40px auto 0;
+    }
+}

@@ -1,0 +1,795 @@
+@font-face {
+  font-family: "Spinnaker-Regular";
+  src: url("../fuentes/Spinnaker-Regular.ttf"); }
+
+*:not(i) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spinnaker-Regular" !important; }
+  *:not(i)::selection {
+    background: #00000020; }
+
+body {
+  background: #f5f5f5; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  color: #585757; }
+
+.subtitulo {
+  color: #585757;
+  margin: 0 auto 40px;
+  border-bottom: 2px solid #e7bc3d;
+  padding-bottom: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+header {
+  height: 65px;
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 5px 15px #00000010; }
+  header a,
+  header i {
+    color: #585757; }
+  header .headerCenter {
+    height: 65px;
+    flex-wrap: wrap; }
+    header .headerCenter .headerCenterDivs {
+      height: 100%; }
+
+.navegador {
+  position: relative; }
+
+.navegadorMenu {
+  font-size: 22px; }
+  .navegadorMenu:hover + .navegadorNav {
+    left: 0; }
+
+.navegadorNav {
+  position: fixed;
+  height: 100%;
+  min-width: 250px;
+  width: calc(100% - 80%);
+  z-index: 100;
+  background: #fff;
+  left: -100vh;
+  top: 0;
+  transition: .2s;
+  box-shadow: 10px 0 15px #00000020; }
+  .navegadorNav div {
+    width: 170px;
+    margin: 20px auto;
+    position: relative;
+    left: -10px; }
+  .navegadorNav ul {
+    margin-top: 30px; }
+    .navegadorNav ul li {
+      padding: 2px 10px; }
+      .navegadorNav ul li a {
+        padding: 5px;
+        display: block; }
+        .navegadorNav ul li a i {
+          margin-right: 5px;
+          display: inline-block;
+          width: 20px; }
+        .navegadorNav ul li a:hover {
+          color: #585757; }
+          .navegadorNav ul li a:hover i {
+            color: #4bbec5; }
+  .navegadorNav:hover {
+    left: 0; }
+
+.pagActual i {
+  color: #4bbec5; }
+
+.logoHeader {
+  width: 45px;
+  height: 45px;
+  margin: 0 15px; }
+  .logoHeader img {
+    width: 100%;
+    object-fit: contain; }
+
+.lugares {
+  position: relative;
+  height: auto; }
+  .lugares h3 {
+    color: #585757;
+    font-weight: 300;
+    font-size: 20px; }
+  .lugares:hover .lugaresLista {
+    display: block; }
+  .lugares:hover h3 {
+    height: 65px;
+    line-height: 65px; }
+
+.lugaresLista {
+  position: absolute;
+  top: 60px;
+  left: -17px;
+  width: 200px;
+  background: #fff;
+  padding-left: 7px;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  box-shadow: 0 10px 15px #00000010; }
+
+.lugaresListaRegiones {
+  margin: 5px 0; }
+
+.region {
+  display: block;
+  padding: 5px 5px 5px 10px;
+  font-size: 16px;
+  border-left: 2px solid #fff; }
+  .region:hover {
+    border-color: #4bbec5;
+    color: #585757; }
+    .region:hover + .lugaresListaCiudades {
+      display: flex; }
+
+.lugaresListaCiudades {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 90%;
+  background: #4bbec5;
+  min-height: 100%;
+  min-width: 420px;
+  padding: 20px 0 20px 10%;
+  border-radius: 5px;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap; }
+  .lugaresListaCiudades li {
+    width: 185px; }
+    .lugaresListaCiudades li a {
+      display: block;
+      padding: 5px 0 5px 20px;
+      font-size: 15px;
+      color: #fff; }
+      .lugaresListaCiudades li a:hover {
+        text-decoration: underline; }
+  .lugaresListaCiudades:hover {
+    display: flex; }
+
+.buscadorSearch {
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px; }
+
+.buscadorEnviar {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: -5px;
+  font-size: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0; }
+
+.notificaciones {
+  font-size: 22px;
+  margin: 0 15px; }
+
+.usuario {
+  height: auto;
+  position: relative; }
+  .usuario:hover {
+    height: 65px;
+    display: flex;
+    align-items: center; }
+    .usuario:hover .usuarioOpciones {
+      display: block; }
+
+.contenedorFotoPerfil {
+  overflow: hidden;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%; }
+  .contenedorFotoPerfil img {
+    object-fit: contain;
+    width: 35px; }
+
+.usuarioOpciones {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  width: 170px;
+  display: none;
+  box-shadow: 0 10px 15px #00000010; }
+  .usuarioOpciones li a {
+    display: block;
+    padding: 5px; }
+    .usuarioOpciones li a i {
+      display: inline-block;
+      width: 20px;
+      margin: 0 5px; }
+    .usuarioOpciones li a:hover {
+      color: #585757; }
+      .usuarioOpciones li a:hover i {
+        color: #4bbec5; }
+
+footer {
+  background: #4bbec5; }
+  footer h3 {
+    color: #fff;
+    padding-left: 10px;
+    border-left: 2px solid #e7bc3d;
+    position: relative;
+    left: -10px; }
+  footer a {
+    color: #fff; }
+    footer a:hover {
+      text-decoration: underline; }
+
+.footerCenter {
+  padding: 50px 0; }
+
+.descuento {
+  height: auto;
+  margin-bottom: 50px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 0; }
+
+.logoFooter {
+  width: 200px;
+  margin: 0 auto 20px; }
+  .logoFooter img {
+    width: 100%;
+    object-fit: contain; }
+
+.descuentoFormulario h4 {
+  text-align: center;
+  color: #585757;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 20px; }
+
+.descuentoFormulario div {
+  width: 375px;
+  margin: auto; }
+
+.descuentoCorreo {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px; }
+
+.descuentoEnviar {
+  padding: 10px;
+  background: #e7bc3d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; }
+
+.footerDiv {
+  display: flex;
+  justify-content: space-evenly; }
+  .footerDiv div {
+    min-width: 130px; }
+    .footerDiv div h3 {
+      font-size: 20px;
+      font-weight: 600; }
+
+.footerLista {
+  padding-left: 10px; }
+  .footerLista li {
+    margin: 10px 0; }
+    .footerLista li a i {
+      width: 20px;
+      margin-right: 7px; }
+    .footerLista li a:hover {
+      color: #fff; }
+
+.btnEfecto {
+  cursor: pointer; }
+  .btnEfecto:hover {
+    animation: btnEfecto 1S infinite; }
+
+@keyframes btnEfecto {
+  0% {
+    background: #e7bc3d99; }
+  100% {
+    background: #e7bc3d; } }
+
+.presentacion {
+  width: 100%;
+  position: relative; }
+
+.contenedorVideo {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  top: -138px;
+  max-width: 2000px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .contenedorVideo video {
+    width: 100%;
+    min-height: 600px; }
+
+.unirVideo {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  height: calc(100% - 80%);
+  width: 100%;
+  background: #f5f5f5; }
+
+.contenedorPresentacionLugares {
+  height: 100%; }
+  .contenedorPresentacionLugares h1 {
+    color: #fff;
+    font-size: 64px;
+    text-align: center;
+    padding: 70px 0;
+    animation: iniciar 1s 1;
+    transform: scale(0.8) translateY(0);
+    font-weight: 600; }
+    .contenedorPresentacionLugares h1 span {
+      color: #4bbec5; }
+
+@keyframes iniciar {
+  0% {
+    transform: scale(1) translateY(60px); }
+  80% {
+    transform: scale(1) translateY(60px); }
+  100% {
+    transform: scale(0.8) translateY(0); } }
+
+.presentacionLugares {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px) 150px repeat(2, 100px);
+  grid-template-areas: "cordoba cordoba   bsas" "cordoba cordoba   bsas" "norte   patagonia costa" "cuyo    litoral   litoral" "cuyo    litoral   litoral";
+  gap: 10px;
+  animation: iniciar2 1s 1; }
+  .presentacionLugares div {
+    border-radius: 5px;
+    overflow: hidden;
+    background-size: cover;
+    position: relative; }
+    .presentacionLugares div h2 {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      width: 200px;
+      background: #fff;
+      font-size: 22px;
+      border-radius: 5px 5px 0 0;
+      transform: translateX(-50%) scaleX(0.5);
+      transition: .3s;
+      box-shadow: 0 0 10px #00000060; }
+      .presentacionLugares div h2 a {
+        color: #fff;
+        font-weight: 300;
+        display: block;
+        padding: 10px;
+        position: relative;
+        top: -50px;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        background: #00000060;
+        width: 200px;
+        transform: scaleX(2);
+        transition: .3s; }
+    .presentacionLugares div:hover h2 {
+      transform: translateX(-50%) scaleX(1);
+      bottom: 0; }
+      .presentacionLugares div:hover h2 a {
+        transform: scaleX(1);
+        top: 0;
+        background: transparent;
+        color: #585757; }
+
+@keyframes iniciar2 {
+  0% {
+    opacity: 0;
+    transform: translateY(120px); }
+  80% {
+    opacity: 0;
+    transform: translateY(120px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.lugar1 {
+  background-image: url("/../multimedia/img/costa.jpg");
+  grid-area: costa; }
+
+.lugar2 {
+  background-image: url("/../multimedia/img/cordoba.jpg");
+  grid-area: cordoba; }
+
+.lugar3 {
+  background-image: url("/../multimedia/img/bsas.jpg");
+  grid-area: bsas; }
+
+.lugar4 {
+  background-image: url("/../multimedia/img/norte.jpg");
+  grid-area: norte; }
+
+.lugar5 {
+  background-image: url("/../multimedia/img/patagonia.jpg");
+  grid-area: patagonia; }
+
+.lugar6 {
+  background-image: url("/../multimedia/img/cuyo.jpg");
+  grid-area: cuyo; }
+
+.lugar7 {
+  background-image: url("/../multimedia/img/litoral.jpg");
+  grid-area: litoral; }
+
+.mejoresValoraciones {
+  margin: 60px auto; }
+  .mejoresValoraciones h3 {
+    width: 340px;
+    text-align: center; }
+
+.contenedorMejoresValoraciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.alojamientosMejoresValorados {
+  display: flex;
+  background: #fff;
+  width: 45%;
+  height: auto;
+  min-height: 250px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px; }
+  .alojamientosMejoresValorados:hover .guardar {
+    display: flex; }
+
+.alojamientoValoradoImg {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 230px;
+  width: 250px; }
+  .alojamientoValoradoImg img {
+    object-fit: cover;
+    height: 100%; }
+
+.guardar {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background: #ffffff;
+  font-size: 14px;
+  cursor: pointer; }
+  .guardar:hover {
+    background: #ffffffaa; }
+
+.infoAlojamientoValorado {
+  width: 300px;
+  padding-left: 15px; }
+  .infoAlojamientoValorado h2 {
+    color: #585757;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 600; }
+  .infoAlojamientoValorado p {
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+    color: #6e6e6e;
+    line-height: 17px; }
+
+.valoracion {
+  font-size: 13px;
+  margin: 5px 0;
+  color: #e7bc3d;
+  position: relative;
+  display: inline-block; }
+  .valoracion span {
+    color: #fff;
+    background-color: #00000060;
+    border-radius: 5px;
+    padding: 3px;
+    position: absolute;
+    right: -115px;
+    top: -3px;
+    display: none;
+    min-width: 110px;
+    text-align: center; }
+  .valoracion:hover span {
+    display: block; }
+
+.mainExplorar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start; }
+
+.contenedorFiltros {
+  color: #585757;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px; }
+  .contenedorFiltros h3 {
+    font-size: 21px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 300; }
+    .contenedorFiltros h3 i {
+      -webkit-text-stroke: 1.5px #585757;
+      color: #fff;
+      font-size: 20px; }
+
+.filtros {
+  padding-right: 5px; }
+  .filtros h4 {
+    font-size: 18px;
+    margin: 20px 0 10px; }
+
+.filtrosDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 10px; }
+  .filtrosDiv label,
+  .filtrosDiv div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer; }
+
+.filtroPersonas input {
+  width: 50px; }
+
+.aplicar {
+  color: #fff;
+  background: #e7bc3d;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  display: block;
+  width: 100px;
+  margin: 30px auto 5px;
+  font-size: 16px; }
+
+.contenedorAlojamientosExplorar {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start; }
+
+.alojamientoExplorar {
+  width: 230px;
+  height: 300px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 5px 5px 0;
+  color: #585757; }
+  .alojamientoExplorar .guardar {
+    top: 20px;
+    left: 20px; }
+  .alojamientoExplorar h5 {
+    font-size: 22px; }
+    .alojamientoExplorar h5 span {
+      font-size: 14px;
+      font-weight: 300;
+      color: #ccc; }
+  .alojamientoExplorar h2 {
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 0;
+    line-height: 18px; }
+    .alojamientoExplorar h2 span {
+      font-size: 12px;
+      color: #ccc; }
+  .alojamientoExplorar:hover {
+    box-shadow: 0 5px 10px #00000010;
+    transform: scale(1.02);
+    color: #585757; }
+    .alojamientoExplorar:hover .guardar {
+      display: flex; }
+
+.alojamientoExplorarImg {
+  width: 100%;
+  height: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px; }
+  .alojamientoExplorarImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.page-item a {
+  color: #4bbec5; }
+  .page-item a:hover {
+    color: #4bbec5; }
+  .page-item a:focus {
+    color: #4bbec5;
+    box-shadow: none; }
+
+.navPaginacion {
+  min-width: 100%; }
+  .navPaginacion ul {
+    width: 164px;
+    margin: 40px auto 0; }
+
+.mainPublicar {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  color: #585757; }
+  .mainPublicar h1 {
+    width: 680px;
+    text-align: center; }
+  .mainPublicar h3 {
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+    margin: 30px 0 10px; }
+    .mainPublicar h3 + span {
+      font-size: 14px;
+      color: #9e9e9e;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px; }
+
+.infoPublicar {
+  position: fixed;
+  bottom: 20px;
+  right: 120px;
+  border-radius: 50%;
+  background: #e7bc3d;
+  color: #fff;
+  font-size: 25px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px #00000020; }
+  .infoPublicar p {
+    position: absolute;
+    font-size: 16px;
+    display: none;
+    width: 250px;
+    background: #fff;
+    color: #585757;
+    border-radius: 5px;
+    padding: 10px;
+    left: -260px;
+    top: -200px;
+    z-index: 1000; }
+    .infoPublicar p:hover {
+      display: block; }
+
+.progreso {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto 80px;
+  position: relative; }
+  .progreso div {
+    border: 1px solid #9e9e9e;
+    color: #9e9e9e;
+    position: relative;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5; }
+    .progreso div span {
+      position: absolute;
+      font-size: 14px;
+      width: 150px;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center; }
+    .progreso div:nth-child(3) span {
+      bottom: -20px;
+      width: 200px; }
+  .progreso .progresoActual {
+    color: #4bbec5;
+    border: 2px solid #4bbec5; }
+    .progreso .progresoActual span {
+      color: #9e9e9e; }
+  .progreso i {
+    font-size: 22px; }
+
+.datosProritarios input,
+.datosContacto input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0; }
+
+.form-floating span {
+  color: #9e9e9e;
+  font-size: 14px;
+  padding: 10px; }
+
+.datosTel input {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 98%; }
+
+.contenedorSelectTel {
+  position: relative; }
+  .contenedorSelectTel select {
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 98%; }
+  .contenedorSelectTel i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); }
+
+#caract + label,
+#numero + label {
+  top: 5px; }
+
+.siguientePaso {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background: #e7bc3d;
+  padding: 10px;
+  font-size: 16px;
+  width: 120px;
+  margin: 60px auto 40px; }
+
+/* Faltan contacto y guardados */
