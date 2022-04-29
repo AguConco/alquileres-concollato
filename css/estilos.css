@@ -439,6 +439,9 @@ footer a:hover {
 
 /* Inicio */
 
+.carousel{
+    display: none;
+}
 .presentacion {
     width: 100%;
     position: relative;
@@ -1604,6 +1607,104 @@ video {
     /* Generales */
 
     /* Inicio */
+    .carousel{
+        display: block;
+    }
+    .carousel-item{
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .carouselLugar1 {
+        background-image: url('../multimedia/img/costa.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .carouselLugar2 {
+        background-image: url('../multimedia/img/cordoba.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .carouselLugar3 {
+        background-image: url('../multimedia/img/bsas.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .carouselLugar4 {
+        background-image: url('../multimedia/img/norte.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .carouselLugar5 {
+        background-image: url('../multimedia/img/patagonia.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .carouselLugar6 {
+        background-image: url('../multimedia/img/cuyo.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .carouselLugar7 {
+        background-image: url('../multimedia/img/litoral.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .infoCarouselLugares{
+        position: relative;
+        height: 100%;
+    }
+    .infoCarouselLugares h2 {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        width: 200px;
+        background: #fff;
+        font-size: 22px;
+        border-radius: 5px 5px 0 0;
+        transform: translateX(-50%) scaleX(.5);
+        transition: .3s;
+        box-shadow: 0 0 10px #00000060;
+    }
+    .infoCarouselLugares h2 a {
+        color: #fff;
+        font-weight: 300;
+        display: block;
+        padding: 10px;
+        position: relative;
+        top: -50px;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        background: #00000060;
+        width: 200px;
+        transform: scaleX(2);
+        transition: .3s;
+    }
+        
+    .infoCarouselLugares h2:hover{
+        transform: translateX(-50%) scaleX(1);
+        bottom: 0;
+    }
+    
+    .infoCarouselLugares h2:hover a {
+        transform: scaleX(1);
+        top: 0;
+        background: transparent;
+        color: #585757;
+    }
 
     .contenedorVideo {
         display: none;
@@ -1623,10 +1724,7 @@ video {
     }
 
     .presentacionLugares {
-        display: flex;
-        overflow: auto;
-        animation: none;
-        margin: auto;
+        display: none;
     }
 
     .presentacionLugares div {
