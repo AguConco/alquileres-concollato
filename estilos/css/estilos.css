@@ -1053,13 +1053,13 @@ footer {
   /* Generales */
   header {
     height: 120px; }
-  .headerCenter {
-    height: 100%; }
-  .headerCenterDivs {
-    height: 50%;
-    width: 100%;
-    justify-content: center !important;
-    position: relative; }
+    header .headerCenter {
+      height: 100%; }
+      header .headerCenter .headerCenterDivs {
+        height: 50%;
+        width: 100%;
+        justify-content: center !important;
+        position: relative; }
   .navegador {
     position: absolute;
     left: 20px; }
@@ -1129,7 +1129,8 @@ footer {
       padding: 40px 0;
       animation: none; }
   .carousel {
-    display: block; }
+    display: block;
+    transform: scale(1.1); }
   .carousel-control-next {
     right: 10px; }
   .carousel-control-prev {

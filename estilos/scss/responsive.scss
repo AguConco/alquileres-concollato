@@ -216,18 +216,15 @@
 
     header {
         height: 120px;
-        padding-bottom: 5px;
-    }
-
-    .headerCenter {
-        height: 100%;
-    }
-
-    .headerCenterDivs {
-        height: 50%;
-        width: 100%;
-        justify-content: center !important;
-        position: relative;
+        .headerCenter {
+            height: 100%;
+            .headerCenterDivs {
+                height: 50%;
+                width: 100%;
+                justify-content: center !important;
+                position: relative;
+            }
+        }
     }
 
     .navegador {
@@ -349,6 +346,7 @@
 
     .carousel {
         display: block;
+        transform: scale(1.1);
     }
 
     .carousel-control-next {
