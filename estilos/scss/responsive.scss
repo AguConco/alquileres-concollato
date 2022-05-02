@@ -1,0 +1,679 @@
+@media all and (min-width: 1020px) and (max-width: 1200px) {
+    .alojamientosMejoresValorados {
+        width: 49%;
+        margin: 5px 0 5px 1%;
+
+    }
+
+    .alojamientoValoradoImg {
+        height: 257px;
+    }
+
+    .navPaginacion {
+        min-width: 460px;
+        ul {
+            width: 164px;
+            margin: 40px auto 0;
+        }
+    }
+}
+
+@media all and (min-width: 600px) and (max-width:1023px) {
+
+
+    .logoHeader {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lugaresLista {
+        left: -55px;
+        width: 190px;
+    }
+
+    .lugaresListaCiudades {
+        min-width: 400px;
+    }
+
+
+    /* Generales */
+
+    /* Inicio */
+    .unirVideo {
+        bottom: 0;
+        height: calc(100% - 75%);
+    }
+
+
+    .contenedorPresentacionLugares {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .presentacionLugares {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "cordoba cordoba cordoba   bsas      bsas    bsas"
+            "cordoba cordoba cordoba   bsas      bsas    bsas"
+            "norte   norte   patagonia patagonia costa   costa"
+            "cuyo    cuyo    cuyo      litoral   litoral litoral"
+            "cuyo    cuyo    cuyo      litoral   litoral litoral";
+
+        div {
+            h2 {
+                border-radius: 0;
+                width: 100%;
+                font-size: 18px;
+                a {
+                    border-radius: 0;
+                    width: 100%;
+            
+                }
+            }
+        }
+    }
+
+
+
+
+    .alojamientosMejoresValorados {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .alojamientoValoradoImg {
+        width: 100%;
+        margin-bottom: 15px;
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .guardar {
+        display: flex;
+    }
+
+    .infoAlojamientoValorado {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* Inicio */
+
+    /* Contacto */
+
+    .contenedorFormulario h3 {
+        width: 440px;
+
+    }
+
+
+    /* Explorar */
+
+    .mainExplorar {
+        display: block;
+    }
+
+    .formularioFiltros {
+        display: none;
+    }
+
+    .contenedorAlojamientosExplorar {
+        margin-top: 10px;
+        margin-left: 0;
+        justify-content: start;
+    }
+
+    .alojamientoExplorar {
+        margin: 0 1px 10px;
+    }
+
+    /* Explorar */
+
+
+    /* Publicar */
+
+    .mainPublicar {
+        h1 {
+            width: 370px;
+            text-align: center;
+        }
+    }
+
+    .progreso {
+        div{
+            &:nth-child(3) {
+                span {
+                    bottom: -42px;
+                    width: 150px;
+                }
+            }
+        }
+    }
+
+    /* Publicar */
+
+    /* Guardados */
+
+
+    .alquilerGuardadoImg {
+        min-width: 200px;
+    }
+
+    .infoGuardado {
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+
+
+    /* Guardados */
+
+}
+
+@media all and (min-width: 599px) and (max-width:770px) {
+    .contenedorVideo {
+        top: -175px;
+
+    }
+
+    .unirVideo {
+        height: calc(100% - 70%);
+
+    }
+
+    .alojamientoExplorar {
+        width: 49%;
+    }
+
+    .alojamientosMejoresValorados {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .infoAlojamientoValorado {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .datosTel {
+        select {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+        }
+    }
+
+
+}
+
+@media all and (max-width: 599px) {
+
+    /* Generales */
+
+    header {
+        height: 120px;
+    }
+
+    .headerCenter {
+        height: 100%;
+    }
+
+    .headerCenterDivs {
+        height: 50%;
+        width: 100%;
+        justify-content: center !important;
+        position: relative;
+    }
+
+    .navegador {
+        position: absolute;
+        left: 20px;
+    }
+
+    .logoHeader {
+        margin: 5px 15px 0;
+    }
+
+    .lugares {
+        display: none;
+    }
+
+    .buscador {
+        order: 3;
+        width: 95%;
+    }
+
+    .buscadorFormulario {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .buscadorSearch {
+        width: 90%;
+        height: 40px;
+
+    }
+
+    .buscadorEnviar {
+        height: 40px;
+        width: 10%;
+
+    }
+
+    .notificaciones {
+        display: none;
+    }
+
+    .usuario {
+        position: absolute;
+        right: 20px;
+        top: -50%;
+        transform: translateY(-50%);
+    }
+
+    .footerCenter {
+        width: 100%;
+    }
+
+
+    .logoFooter {
+        margin: 0 auto 30px;
+    }
+
+    .descuentoFormulario {
+        h4 {
+            font-size: 16px;
+        }
+        div {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .descuentoCorreo {
+            width: 75%;
+        }
+        .descuentoEnviar {
+            width: 23%;
+        }
+    
+    }
+ 
+    .footerDiv {
+        display: block;
+        div {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            h3 {
+                width: 180px;
+                margin-top: 15px;
+            }
+        
+        }
+    }
+
+    .footerLista {
+        padding-left: 10px;
+        width: 180px;
+
+    }
+
+    /* Generales */
+
+    /* Inicio */
+
+    .contenedorVideo {
+        display: none;
+    }
+
+    .contenedorPresentacionLugares {
+        width: 95%;
+        margin: none;
+        h1 {
+            color: $colorLetras;
+            font-size: 48px;
+            padding: 40px 0;
+            animation: none;
+        }
+
+    }
+
+    .carousel {
+        display: block;
+    }
+
+    .carousel-control-next {
+        right: 10px;
+    }
+
+    .carousel-control-prev {
+        left: 10px;
+    }
+
+    .carousel-item {
+        border-radius: 5px;
+        overflow: hidden;
+        transform: scale(.9);
+    }
+
+    .carouselLugar1 {
+        background-image: url('/multimedia/img/costa.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .carouselLugar2 {
+        background-image: url('/multimedia/img/cordoba.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .carouselLugar3 {
+        background-image: url('/multimedia/img/bsas.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .carouselLugar4 {
+        background-image: url('/multimedia/img/norte.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .carouselLugar5 {
+        background-image: url('/multimedia/img/patagonia.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .carouselLugar6 {
+        background-image: url('/multimedia/img/cuyo.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .carouselLugar7 {
+        background-image: url('/multimedia/img/litoral.jpg');
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .infoCarouselLugares {
+        position: relative;
+        height: 100%;
+        h2 {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            width: 200px;
+            background: #fff;
+            font-size: 22px;
+            border-radius: 5px 5px 0 0;
+            transform: translateX(-50%) scaleX(.5);
+            transition: .3s;
+            box-shadow: 0 0 10px #00000060;
+            a {
+                color: #fff;
+                font-weight: 300;
+                display: block;
+                padding: 10px;
+                position: relative;
+                top: -50px;
+                border-radius: 5px 5px 0 0;
+                text-align: center;
+                background: #00000060;
+                width: 200px;
+                transform: scaleX(2);
+                transition: .3s;
+            }
+            &:hover {
+                transform: translateX(-50%) scaleX(1);
+                bottom: 0;
+                a {
+                    transform: scaleX(1);
+                    top: 0;
+                    background: transparent;
+                    color: $colorLetras;
+                }
+            }
+        }
+    
+    }
+
+    .presentacionLugares {
+        display: none;
+    }
+
+    .mejoresValoraciones {
+        h3 {
+            width: 205px;
+        }
+    }
+
+
+    .alojamientosMejoresValorados {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .alojamientoValoradoImg {
+        width: 50%;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+    
+    }
+
+    .guardar {
+        display: flex;
+    }
+
+    .infoAlojamientoValorado {
+        width: 50%;
+    }
+
+    /* Inicio */
+
+    /* Contacto */
+
+    .contenedorFormulario {
+        width: 95%;
+        margin: 60px auto;
+        h3 {
+            width: 350px;
+    
+        }
+    }
+
+    .datosFormularioContacto {
+        width: 100%;
+        label {
+            padding-left: 0px;
+        }
+        #consulta{
+            +label{
+                padding-left: 0px;
+            }
+        } 
+    }
+
+
+    /* Contacto */
+
+    /* Explorar */
+
+    .mainExplorar {
+        width: 95%;
+        display: block;
+    }
+
+    .formularioFiltros {
+        display: none;
+    }
+
+    .contenedorAlojamientosExplorar {
+        justify-content: center;
+        margin: 10px 0 0;
+
+    }
+
+    .alojamientoExplorar {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+
+    /* Explorar */
+    /* Publicar */
+
+    label {
+        left: 16px !important;
+    }
+
+    .infoPublicar {
+        right: 40px;
+    }
+
+    .mainPublicar {
+        h1 {
+            width: 275px;
+            text-align: center;
+        }
+        h3{
+            +span {
+                width: 95%;
+                margin: 0 auto 30px;
+            }
+        }
+    }
+
+    .infoPublicar {
+        p {
+            left: -200px;
+            top: -250px;
+    
+        }
+    }
+
+    .progreso {
+        div {
+            span {
+                font-size: 12px;
+                width: 80px;
+                bottom: -35px;
+            }
+            &:nth-child(3) {
+                span {
+                    bottom: -35px;
+                    width: 80px;
+                }
+            }
+            &:nth-child(4) {
+                span {
+                    bottom: -20px;
+
+                }
+            }
+        }
+    }
+
+
+    .datosProritarios,
+    .datosContacto {
+        input {
+            width: 95%;
+            margin: 5px 2.5%;
+        }
+    
+    }
+    .form-floating+span {
+        padding: 15px;
+
+    }
+
+    .datosTel {
+        input {
+            width: 95%;
+            margin-left: 2.5%;
+        }
+        select {
+            width: 95%;
+            margin: 5px 2.5%;
+        }
+    }
+
+    /* Publicar */
+
+    /* Guardados */
+
+
+    .mainGuardados {
+        h3 {
+            width: 200px;
+        }
+    }
+
+    .alquilerGuardado {
+        flex-direction: column;
+        height: auto;
+        input {
+            display: none;
+        }
+    }
+
+    .alquilerGuardadoImg {
+        width: 100%;
+    }
+
+    .infoGuardado {
+        height: 150px;
+        padding: 15px 0 0;
+        h2 {
+            font-size: 20px;
+        }
+    
+    }
+
+    .opcionesGuardado {
+        button {
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background: $colorPrincipal1;
+            padding: 10px;
+            font-size: 18px;
+            width: 13%;
+            &:nth-child(1) {
+                width: 70%;
+            }
+        }
+    }
+
+    .eliminarTodo {
+        display: none;
+    }
+
+    /* Guardados */
+}
+
+@media all and (max-width: 500px) {
+    .contenedorFormulario h3 {
+        width: 260px;
+        text-align: center;
+    }
+}

@@ -12,14 +12,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     label{
-        color: #585757;
+        color: $colorLetras;
         top: 5px;
     }
     input, textarea, select{
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        color: #585757;
+        color: $colorLetras;
         margin: 5px 0;
     }
     textarea {
@@ -31,7 +31,7 @@
     button {
         font-size: 16px;
         padding: 10px;
-        background: #e7bc3d;
+        background: $colorPrincipal1;
         color: #fff;
         border: none;
         border-radius: 5px;
@@ -83,8 +83,8 @@
     li {
         font-size: 20px;
         margin: 15px 0;
-        color: #585757;
-        border-left: 2px solid #e7bc3d;
+        color: $colorLetras;
+        border-left: 2px solid $colorPrincipal1;
         padding-left: 15px;
     }
 }
