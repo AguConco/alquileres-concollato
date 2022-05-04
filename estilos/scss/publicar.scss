@@ -1,0 +1,179 @@
+.mainPublicar {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: $colorLetras;
+
+    h1 {
+        width: 680px;
+        text-align: center;
+    }
+
+    h3 {
+        font-weight: 300;
+        font-size: 22px;
+        text-align: center;
+        margin: 30px 0 10px;
+
+        +span {
+            font-size: 14px;
+            color: #9e9e9e;
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+    }
+
+}
+
+.infoPublicar {
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+    border-radius: 50%;
+    background: $colorPrincipal1;
+    color: #fff;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px #00000020;
+
+    p {
+        position: absolute;
+        font-size: 16px;
+        display: none;
+        width: 250px;
+        background: #fff;
+        color: $colorLetras;
+        border-radius: 5px;
+        padding: 10px;
+        left: -260px;
+        top: -200px;
+        z-index: 1000;
+
+        &:hover {
+            display: block;
+
+        }
+    }
+}
+
+.progreso {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto 80px;
+    position: relative;
+
+    div {
+        border: 1px solid #9e9e9e;
+        color: #9e9e9e;
+        position: relative;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f5f5;
+
+        span {
+            position: absolute;
+            font-size: 14px;
+            width: 150px;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        &:nth-child(3) {
+            span {
+                bottom: -20px;
+                width: 200px;
+            }
+        }
+    }
+
+    .progresoActual {
+        color: $colorPrincipal2;
+        border: 2px solid $colorPrincipal2;
+
+        span {
+            color: #9e9e9e;
+        }
+    }
+
+    i {
+        font-size: 22px;
+    }
+}
+
+.datosProritarios,
+.datosContacto {
+    input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+.form-floating {
+    span {
+        color: #9e9e9e;
+        font-size: 14px;
+        padding: 10px;
+    
+    }
+}
+
+.datosTel {
+    input {
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px 0;
+        width: 98%;
+    }
+}
+
+.contenedorSelectTel {
+    position: relative;
+    select {
+        padding: 16px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 98%;
+    }
+    i {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+#caract,
+#numero{
+    +label{
+        top: 5px;
+    } 
+}
+
+.siguientePaso {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: $colorPrincipal1;
+    padding: 10px;
+    font-size: 16px;
+    width: 120px;
+    margin: 60px auto 40px;
+}

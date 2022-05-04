@@ -1,0 +1,292 @@
+.presentacion {
+    width: 100%;
+    position: relative;
+}
+
+.contenedorVideo {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: -138px;
+    max-width: 2000px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    video {
+        width: 100%;
+        min-height: 600px;
+    }
+}
+
+.unirVideo {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    height: calc(100% - 80%);
+    width: 100%;
+    background: #f5f5f5;
+}
+
+
+
+.contenedorPresentacionLugares {
+    height: 100%;
+
+    h1 {
+        color: #fff;
+        font-size: 64px;
+        text-align: center;
+        padding: 70px 0;
+        animation: iniciar 1s 1;
+        transform: scale(.8) translateY(0);
+        font-weight: 600;
+
+        span {
+            color: $colorPrincipal2;
+        }
+    }
+}
+
+@keyframes iniciar {
+    0% {
+        transform: scale(1) translateY(60px);
+    }
+
+    80% {
+        transform: scale(1) translateY(60px);
+
+    }
+
+    100% {
+        transform: scale(.8) translateY(0);
+    }
+}
+
+.presentacionLugares {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px) 150px repeat(2, 100px);
+    grid-template-areas: "cordoba cordoba   bsas"
+        "cordoba cordoba   bsas"
+        "norte   patagonia costa"
+        "cuyo    litoral   litoral"
+        "cuyo    litoral   litoral";
+    gap: 10px;
+    animation: iniciar2 1s 1;
+    div {
+        border-radius: 5px;
+        overflow: hidden;
+        background-size: cover;
+        position: relative;
+        h2 {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            width: 200px;
+            background: #fff;
+            font-size: 22px;
+            border-radius: 5px 5px 0 0;
+            transform: translateX(-50%) scaleX(.5);
+            transition: .3s;
+            box-shadow: 0 0 10px #00000060;
+            a {
+                color: #fff;
+                font-weight: 300;
+                display: block;
+                padding: 10px;
+                position: relative;
+                top: -50px;
+                border-radius: 5px 5px 0 0;
+                text-align: center;
+                background: #00000060;
+                width: 200px;
+                transform: scaleX(2);
+                transition: .3s;
+            }
+        }
+        &:hover{
+            h2 {
+                transform: translateX(-50%) scaleX(1);
+                bottom: 0;
+                a {
+                    transform: scaleX(1);
+                    top: 0;
+                    background: transparent;
+                    color: $colorLetras;
+                }
+            }
+        }
+    }
+}
+
+@keyframes iniciar2 {
+    0% {
+        opacity: 0;
+        transform: translateY(120px);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.lugar1 {
+    background-image: url('/../multimedia/img/costa.jpg');
+    grid-area: costa;
+}
+
+.lugar2 {
+    background-image: url('/../multimedia/img/cordoba.jpg');
+    grid-area: cordoba;
+}
+
+.lugar3 {
+    background-image: url('/../multimedia/img/bsas.jpg');
+    grid-area: bsas;
+}
+
+.lugar4 {
+    background-image: url('/../multimedia/img/norte.jpg');
+    grid-area: norte;
+}
+
+.lugar5 {
+    background-image: url('/../multimedia/img/patagonia.jpg');
+    grid-area: patagonia;
+}
+
+.lugar6 {
+    background-image: url('/../multimedia/img/cuyo.jpg');
+    grid-area: cuyo;
+}
+
+.lugar7 {
+    background-image: url('/../multimedia/img/litoral.jpg');
+    grid-area: litoral;
+}
+
+.carousel{
+    display: none;
+}
+
+.mejoresValoraciones {
+    margin: 60px auto;
+    h3 {
+        width: 340px;
+        text-align: center;
+    }
+    
+}
+
+.contenedorMejoresValoraciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.alojamientosMejoresValorados {
+    display: flex;
+    background: #fff;
+    width: 45%;
+    height: auto;
+    min-height: 250px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    &:hover {
+        .guardar {
+            display: flex;
+        }
+    }
+}
+
+.alojamientoValoradoImg {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 230px;
+    width: 250px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    
+    }
+}
+
+.guardar {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover {
+        background: #ffffffaa;
+    }
+}
+
+
+.infoAlojamientoValorado {
+    width: 300px;
+    padding-left: 15px;
+    h2 {
+        color: $colorLetras;
+        line-height: 25px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 15px;
+        color: #6e6e6e;
+        line-height: 17px;
+    }
+    
+}
+
+.valoracion {
+    font-size: 13px;
+    margin: 5px 0;
+    color: $colorPrincipal1;
+    position: relative;
+    display: inline-block;
+    span {
+        color: #fff;
+        background-color: #00000060;
+        border-radius: 5px;
+        padding: 3px;
+        position: absolute;
+        right: -115px;
+        top: -3px;
+        display: none;
+        min-width: 110px;
+        text-align: center;
+    }
+    &:hover{
+        span {
+            display: block;
+        }
+    }
+}
