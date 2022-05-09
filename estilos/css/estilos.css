@@ -355,7 +355,7 @@ footer {
     animation: iniciar 1s 1;
     transform: scale(0.8) translateY(0);
     font-weight: 600; }
-    .contenedorPresentacionLugares h1 span {
+    .contenedorPresentacionLugares h1 strong {
       color: #4bbec5; }
 
 @keyframes iniciar {
@@ -868,7 +868,7 @@ footer {
 
 .mainGuardados {
   margin: 80px auto; }
-  .mainGuardados h3 {
+  .mainGuardados h1 {
     width: 375px;
     text-align: center; }
 
