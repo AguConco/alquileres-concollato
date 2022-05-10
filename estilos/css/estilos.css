@@ -1,3 +1,11 @@
+.btnSitio, .descuentoEnviar, .aplicar, .siguientePaso, .formularioContacto button, .opcionesGuardado button {
+  padding: 10px;
+  background: #e7bc3d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; }
+
 @font-face {
   font-family: "Spinnaker-Regular";
   src: url("../fuentes/Spinnaker-Regular.ttf"); }
@@ -25,6 +33,12 @@ textarea,
 button {
   outline: none;
   color: #585757; }
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    box-shadow: none !important;
+    border-color: #ccc !important; }
 
 .subtitulo {
   color: #585757;
@@ -33,7 +47,8 @@ button {
   padding-bottom: 10px;
   font-size: 24px;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 600;
+  text-align: center; }
 
 header {
   height: 65px;
@@ -281,14 +296,6 @@ footer {
   border-radius: 5px;
   width: 300px; }
 
-.descuentoEnviar {
-  padding: 10px;
-  background: #e7bc3d;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px; }
-
 .footerDiv {
   display: flex;
   justify-content: space-evenly; }
@@ -459,8 +466,7 @@ footer {
 .mejoresValoraciones {
   margin: 60px auto; }
   .mejoresValoraciones h3 {
-    width: 340px;
-    text-align: center; }
+    width: 340px; }
 
 .contenedorMejoresValoraciones {
   display: flex;
@@ -587,15 +593,9 @@ footer {
   width: 50px; }
 
 .aplicar {
-  color: #fff;
-  background: #e7bc3d;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
   display: block;
   width: 100px;
-  margin: 30px auto 5px;
-  font-size: 16px; }
+  margin: 30px auto 5px; }
 
 .contenedorAlojamientosExplorar {
   margin-left: 10px;
@@ -667,8 +667,7 @@ footer {
   margin-bottom: 80px;
   color: #585757; }
   .mainPublicar h1 {
-    width: 680px;
-    text-align: center; }
+    width: 680px; }
   .mainPublicar h3 {
     font-weight: 300;
     font-size: 22px;
@@ -729,14 +728,14 @@ footer {
     .progreso div span {
       position: absolute;
       font-size: 14px;
-      width: 150px;
-      bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
-      text-align: center; }
+      text-align: center;
+      width: 150px;
+      bottom: -20px; }
     .progreso div:nth-child(3) span {
-      bottom: -20px;
-      width: 200px; }
+      width: 200px;
+      bottom: -20px; }
   .progreso .progresoActual {
     color: #4bbec5;
     border: 2px solid #4bbec5; }
@@ -786,20 +785,13 @@ footer {
 
 .siguientePaso {
   display: block;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  background: #e7bc3d;
-  padding: 10px;
-  font-size: 16px;
   width: 120px;
   margin: 60px auto 40px; }
 
 .contenedorFormulario {
   margin: 60px auto; }
-  .contenedorFormulario h3 {
-    width: 615px;
-    text-align: center; }
+  .contenedorFormulario h1 {
+    width: 615px; }
 
 .formularioContacto {
   display: flex;
@@ -820,12 +812,6 @@ footer {
     max-height: 150px;
     min-height: 150px; }
   .formularioContacto button {
-    font-size: 16px;
-    padding: 10px;
-    background: #e7bc3d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
     display: block;
     margin: 20px auto;
     width: 100px; }
@@ -869,8 +855,7 @@ footer {
 .mainGuardados {
   margin: 80px auto; }
   .mainGuardados h1 {
-    width: 375px;
-    text-align: center; }
+    width: 375px; }
 
 .alquilerGuardado {
   background: #fff;
@@ -920,11 +905,6 @@ footer {
       color: #9e9e9e; }
 
 .opcionesGuardado button {
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  background: #e7bc3d;
-  padding: 10px;
   font-size: 18px; }
   .opcionesGuardado button:nth-child(1) {
     width: 150px; }
@@ -1018,11 +998,10 @@ footer {
   /* Explorar */
   /* Publicar */
   .mainPublicar h1 {
-    width: 370px;
-    text-align: center; }
+    width: 370px; }
   .progreso div:nth-child(3) span {
-    bottom: -42px;
-    width: 150px; }
+    width: 150px;
+    bottom: -42px; }
   /* Publicar */
   /* Guardados */
   .alquilerGuardadoImg {
@@ -1258,8 +1237,7 @@ footer {
   .infoPublicar {
     right: 40px; }
   .mainPublicar h1 {
-    width: 275px;
-    text-align: center; }
+    width: 275px; }
   .mainPublicar h3 + span {
     width: 95%;
     margin: 0 auto 30px; }
@@ -1289,7 +1267,7 @@ footer {
     margin: 5px 2.5%; }
   /* Publicar */
   /* Guardados */
-  .mainGuardados h3 {
+  .mainGuardados h1 {
     width: 200px; }
   .alquilerGuardado {
     flex-direction: column;
@@ -1299,6 +1277,7 @@ footer {
   .alquilerGuardadoImg {
     width: 100%; }
   .infoGuardado {
+    width: 100%;
     height: 150px;
     padding: 15px 0 0; }
     .infoGuardado h2 {

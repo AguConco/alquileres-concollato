@@ -137,7 +137,6 @@
     .mainPublicar {
         h1 {
             width: 370px;
-            text-align: center;
         }
     }
 
@@ -145,8 +144,7 @@
         div{
             &:nth-child(3) {
                 span {
-                    bottom: -42px;
-                    width: 150px;
+                    @include progreso(150px,-42px);
                 }
             }
         }
@@ -336,7 +334,7 @@
         width: 95%;
         margin: none;
         h1 {
-            color: $colorLetras;
+            color: map-get($map: $color, $key: letras);
             font-size: 48px;
             padding: 40px 0;
             animation: none;
@@ -447,7 +445,7 @@
                     transform: scaleX(1);
                     top: 0;
                     background: transparent;
-                    color: $colorLetras;
+                    color: map-get($map: $color, $key: letras);
                 }
             }
         }
@@ -551,7 +549,6 @@
     .mainPublicar {
         h1 {
             width: 275px;
-            text-align: center;
         }
         h3{
             +span {
@@ -622,7 +619,7 @@
 
 
     .mainGuardados {
-        h3 {
+        h1 {
             width: 200px;
         }
     }
@@ -640,6 +637,7 @@
     }
 
     .infoGuardado {
+        width: 100%;
         height: 150px;
         padding: 15px 0 0;
         h2 {
@@ -653,7 +651,7 @@
             border: none;
             border-radius: 5px;
             color: #fff;
-            background: $colorPrincipal1;
+            background: map-get($map: $color, $key: principal1);
             padding: 10px;
             font-size: 18px;
             width: 13%;

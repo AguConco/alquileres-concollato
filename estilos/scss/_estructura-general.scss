@@ -31,17 +31,22 @@ select,
 textarea,
 button {
     outline: none;
-    color: $colorLetras;
+    color: map-get($map: $color, $key: letras);
+    &:focus{
+        box-shadow: none !important;
+        border-color: #ccc !important;
+    }
 }
 
 .subtitulo {
-    color: $colorLetras;
+    color: map-get($map: $color, $key: letras);
     margin: 0 auto 40px;
-    border-bottom: 2px solid $colorPrincipal1;
+    border-bottom: 2px solid map-get($map: $color, $key: principal1);
     padding-bottom: 10px;
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 600;
+    text-align: center;
 }
 
 header {
@@ -55,7 +60,7 @@ header {
 
     a,
     i {
-        color: $colorLetras;
+        color: map-get($map: $color, $key: letras);
     }
 
     .headerCenter {
@@ -121,10 +126,10 @@ header {
                 }
 
                 &:hover {
-                    color: $colorLetras;
+                    color: map-get($map: $color, $key: letras);
 
                     i {
-                        color: $colorPrincipal2;
+                        color: map-get($map: $color, $key: principal2);
                     }
                 }
 
@@ -140,7 +145,7 @@ header {
 .pagActual {
 
     i {
-        color: $colorPrincipal2;
+        color: map-get($map: $color, $key: principal2);
     }
 }
 
@@ -161,7 +166,7 @@ header {
     height: auto;
 
     h3 {
-        color: $colorLetras;
+        color: map-get($map: $color, $key: letras);
         font-weight: 300;
         font-size: 20px;
     }
@@ -202,8 +207,8 @@ header {
     border-left: 2px solid #fff;
 
     &:hover {
-        border-color: $colorPrincipal2;
-        color: $colorLetras;
+        border-color: map-get($map: $color, $key: principal2);
+        color: map-get($map: $color, $key: letras);
 
         +.lugaresListaCiudades {
             display: flex;
@@ -218,7 +223,7 @@ header {
     z-index: -1;
     top: 0;
     left: 90%;
-    background: $colorPrincipal2;
+    background: map-get($map: $color, $key: principal2);
     min-height: 100%;
     min-width: 420px;
     padding: 20px 0 20px 10%;
@@ -324,10 +329,10 @@ header {
             }
 
             &:hover {
-                color: $colorLetras;
+                color: map-get($map: $color, $key: letras);
 
                 i {
-                    color: $colorPrincipal2;
+                    color: map-get($map: $color, $key: principal2);
                 }
             }
         }
@@ -335,12 +340,12 @@ header {
 }
 
 footer {
-    background: $colorPrincipal2;
+    background: map-get($map: $color, $key: principal2);
 
     h3 {
         color: #fff;
         padding-left: 10px;
-        border-left: 2px solid #e7bc3d;
+        border-left: 2px solid map-get($map: $color, $key: principal1);
         position: relative;
         left: -10px;
     }
@@ -402,12 +407,7 @@ footer {
 }
 
 .descuentoEnviar {
-    padding: 10px;
-    background: #e7bc3d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    @extend .btnSitio;
 }
 
 .footerDiv {
@@ -459,6 +459,6 @@ footer {
     }
 
     100% {
-        background: #e7bc3d;
+        background: map-get($map: $color, $key: principal1);
     }
 }

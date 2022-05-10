@@ -2,7 +2,6 @@
     margin: 80px auto;
     h1 {
         width: 375px;
-        text-align: center;
     }
     
 }
@@ -67,11 +66,7 @@
 
 .opcionesGuardado {
     button {
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        background: $colorPrincipal1;
-        padding: 10px;
+        @extend .btnSitio;
         font-size: 18px;
         &:nth-child(1) {
             width: 150px;
@@ -93,7 +88,7 @@
         font-size: 16px;
         padding: 5px;
         margin-left: 10px;
-        color: $colorLetras;
+        color: map-get($map: $color, $key: letras);
         border-radius: 5px;
         cursor: pointer;
         &:hover {

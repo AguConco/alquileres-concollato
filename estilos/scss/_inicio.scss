@@ -44,7 +44,7 @@
         font-weight: 600;
 
         strong {
-            color: $colorPrincipal2;
+            color: map-get($map: $color, $key: principal2);
         }
     }
 }
@@ -117,7 +117,7 @@
                     transform: scaleX(1);
                     top: 0;
                     background: transparent;
-                    color: $colorLetras;
+                    color: map-get($map: $color, $key: letras);
                 }
             }
         }
@@ -184,7 +184,6 @@
     margin: 60px auto;
     h3 {
         width: 340px;
-        text-align: center;
     }
     
 }
@@ -249,7 +248,7 @@
     width: 300px;
     padding-left: 15px;
     h2 {
-        color: $colorLetras;
+        color: map-get($map: $color, $key: letras);
         line-height: 25px;
         font-size: 20px;
         font-weight: 600;
@@ -269,7 +268,7 @@
 .valoracion {
     font-size: 13px;
     margin: 5px 0;
-    color: $colorPrincipal1;
+    color: map-get($map: $color, $key: principal1);
     position: relative;
     display: inline-block;
     span {

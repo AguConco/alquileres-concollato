@@ -1,0 +1,13 @@
+.btnSitio{
+    padding: 10px;
+    background: map-get($map: $color, $key: principal1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+@mixin progreso ($w,$b) {
+    width: $w;
+    bottom: $b;
+}
