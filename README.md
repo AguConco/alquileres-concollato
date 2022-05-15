@@ -1,4 +1,4 @@
-• Se comprimieron todas las imagenes del sitio y le agregué el tributo alt
+• Se comprimieron todas las imagenes del sitio y le agregué el atributo alt
 
 • Index:
 
