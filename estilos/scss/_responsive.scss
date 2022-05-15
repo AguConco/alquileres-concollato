@@ -103,7 +103,7 @@
 
     /* Contacto */
 
-    .contenedorFormulario h3 {
+    .contenedorFormulario h1 {
         width: 440px;
 
     }
@@ -669,8 +669,7 @@
 }
 
 @media all and (max-width: 500px) {
-    .contenedorFormulario h3 {
+    .contenedorFormulario h1 {
         width: 260px;
-        text-align: center;
     }
 }

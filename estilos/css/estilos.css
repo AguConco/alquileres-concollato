@@ -982,7 +982,7 @@ footer {
     padding-left: 0; }
   /* Inicio */
   /* Contacto */
-  .contenedorFormulario h3 {
+  .contenedorFormulario h1 {
     width: 440px; }
   /* Explorar */
   .mainExplorar {
@@ -1297,6 +1297,5 @@ footer {
   /* Guardados */ }
 
 @media all and (max-width: 500px) {
-  .contenedorFormulario h3 {
-    width: 260px;
-    text-align: center; } }
+  .contenedorFormulario h1 {
+    width: 260px; } }
