@@ -1,3 +1,5 @@
+ErrorDocument 404 http://knowable-villages.000webhostapp.com/alquileresConcollato/pag/error.html
+
 RewriteEngine on
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]

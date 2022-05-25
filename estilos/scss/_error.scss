@@ -1,0 +1,26 @@
+.mainError {
+    height: 500px;
+    padding: 100px 2.5%;
+    h1,
+    h2 {
+        text-align: center;
+        font-weight: 600;
+        color: map-get($map: $color, $key: letras);
+        padding: 3px 0;
+    }
+
+    a{
+        display: block;
+        width: 130px;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 18px;
+        color: map-get($map: $color, $key: principal2);
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+
+}

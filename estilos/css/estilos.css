@@ -933,6 +933,25 @@ input[type="checkbox"] {
     .eliminarTodo button:hover {
       background: #4bbec520; }
 
+.mainError {
+  height: 500px;
+  padding: 100px 2.5%; }
+  .mainError h1,
+  .mainError h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #585757;
+    padding: 3px 0; }
+  .mainError a {
+    display: block;
+    width: 130px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #4bbec5; }
+    .mainError a:hover {
+      text-decoration: underline; }
+
 @media all and (min-width: 1020px) and (max-width: 1200px) {
   .alojamientosMejoresValorados {
     width: 49%;
@@ -1298,7 +1317,19 @@ input[type="checkbox"] {
       width: 70%; }
   .eliminarTodo {
     display: none; }
-  /* Guardados */ }
+  /* Guardados */
+  /* Error 404 */
+  .mainError {
+    height: 500px;
+    padding: 100px 2.5%; }
+    .mainError h1 {
+      font-size: 35px; }
+    .mainError h2 {
+      font-size: 25px; }
+    .mainError a {
+      width: 200px;
+      font-size: 20px; }
+  /* Error 404 */ }
 
 @media all and (max-width: 500px) {
   .contenedorFormulario h1 {
