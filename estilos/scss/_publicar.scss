@@ -53,9 +53,11 @@
         top: -200px;
         z-index: 1000;
 
-        &:hover {
-            display: block;
 
+    }        
+    &:hover {
+        p{
+            display: block;
         }
     }
 }
