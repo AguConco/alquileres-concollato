@@ -1,35 +1,24 @@
-• Se comprimieron todas las imagenes del sitio y le agregué el atributo alt
 
-• Index:
+## Proyecto ALQUILERES ARGENTINA
 
-    - meta description: Alquileres de casas, departamentos, cabañas y complejos en cualquier lugar de Argentina para tus vacaciones
+Sitio web realizado en el curso Desarrollo Web de CoderHouse. 
+Este contiene 5 páginas (inicio, explorar, publicar alojamiento, contacto y guardados).
 
-    - meta keywords: argentina, alquiler, alojamiento, casas, departamentos, cabañas, complejos, vacaciones en argentina
-    
-    - Agregué un strong a la palabra ARGENTINA del título(h1)
+Está maquetado con HTML5 y CSS3, utilizando Bootstrap y Sass.
 
-• Explorar:
+### Funciones pincipales del sitio
 
-    - meta description: Explorar la gran variedad de alojamientos que hay en Argentína para poder ir de vacaciones
+-Buscar alojamientos para tus viajes en cualquier lugar de Argentina.
 
-    - meta keywords:argentina, alquiler, alojamiento, buenos aires, cuyo, córdoba, litoral, patagonia, notre, costa atlántica
+-Publicar propiedades (casas, cabañas, deptos, etc) para que otras personas puedan alquilar y alojarse allí.
 
-• Publicar:
+### Páginas a detalle
 
-    - meta description: Publicar tu casas, departamentos, cabañas o complejos para que las personas puedan alquilarlo y pasar sus vacaciones ahí
+- **Inicio:**  Se encuentran las regiones de Argentina donde uno se puede ir de vacaciones y te recomienda alquileres que tuvieron una muy buena valoración.
+- **Explorar:** Se muestran todos los alojamientos publicados y además se pueden filtrar por los que uno más necesita. 
+- **Publicar alojamiento:** Se encuentra el formulario para completar con todos datos de la propiedad que se quiere publicar.
+- **Contacto:** Se encuentra un formulario de ayuda por las dudas que haya algún problema y algunas preguntas guía para tener en cuenta a la hora de alquilar.
+- **Guardados:** Aparecen los alojamientos que se guardaron.
 
-    - meta keywords: argentina, alquiler, alojamiento, casas, departamentos, cabañas, complejos, propiedad, publicar, información, datos 
 
-• Contacto:
 
-    - meta description: Duda o problema que haya pueden comunicarse con el soporte de Alquileres Argentina para obtener la ayuda necesaria
-
-    - meta keywords: argentina, alquiler, problema, soporte, ayuda, contacto, comunicar
-
-    - Cambié la etiqueta del título, de un h3 a un h1
-
-• Guardados:
-
-    - meta description: Guardar casas, departamentos, cabañas y complejos que más te gusten para ir de vacaciones
-
-    - meta keywords: argentina, alojamiento, guardado, casas, departamentos, cabañas, complejos
